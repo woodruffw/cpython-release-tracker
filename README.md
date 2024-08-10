@@ -5,3 +5,7 @@ CPython release, distilling some useful metadata into
 machine-readable files.
 
 See [versions](./versions/) to browse these files.
+
+## License
+
+MIT License. See [LICENSE](./LICENSE).
