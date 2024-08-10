@@ -1,0 +1,38 @@
+name: check for new CPython versions
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+  check-stable-abi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: set up environment
+        run: |
+          python -m venv env
+          ./env/bin/python -m pip install -r requirements.txt
+
+      - name: check for new versions
+        run: |
+          ./env/bin/python fetcher.py
+
+      - name: create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "[BOT] update versions"
+          branch: update-versions
+          branch-suffix: timestamp
+          title: "[BOT] update versions"
+          body: |
+            This is an automated pull request.
+
+            Please review manually before merging.
+          assignees: "woodruffw"
+          reviewers: "woodruffw"
