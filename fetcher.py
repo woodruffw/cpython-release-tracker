@@ -14,8 +14,10 @@ from packaging.version import Version
 
 _FORCE = os.getenv("FORCE") is not None
 
-_OUT = Path(__file__).parent / "versions"
-assert _OUT.is_dir()
+_VERSIONS = Path(__file__).parent / "versions"
+assert _VERSIONS.is_dir()
+
+_SIGNING_IDENTITIES = Path(__file__).parent / "signing-identities.json"
 
 
 def log(msg: str) -> None:
@@ -23,7 +25,7 @@ def log(msg: str) -> None:
 
 
 def do_release(version: Version, slug: str) -> None:
-    output = _OUT / f"{version}.json"
+    output = _VERSIONS / f"{version}.json"
 
     # Don't repeat ourselves unless told to.
     if output.is_file() and not _FORCE:
@@ -73,7 +75,7 @@ def do_release(version: Version, slug: str) -> None:
 
 
 def do_sigstore(version: Version) -> None:
-    input = _OUT / f"{version}.json"
+    input = _VERSIONS / f"{version}.json"
     artifacts = json.loads(input.read_text())
 
     for artifact in artifacts:
@@ -93,6 +95,21 @@ def do_sigstore(version: Version) -> None:
     input.write_text(json.dumps(artifacts))
 
 
+def do_sigstore_identities() -> None:
+    sigstore_info = urllib3.request("GET", "https://www.python.org/download/sigstore/")
+    sigstore_info_doc = html.fromstring(sigstore_info.data)
+
+    sigstore_table = sigstore_info_doc.xpath("//table")[0]
+    headers = sigstore_table.xpath(".//thead//tr//th//text()")
+
+    sigstore_identities = []
+    for row in sigstore_table.xpath(".//tbody//tr"):
+        col_values = row.xpath(".//td//text()")
+        sigstore_identities.append(dict(zip(headers, col_values)))
+
+    _SIGNING_IDENTITIES.write_text(json.dumps(sigstore_identities, indent=4))
+
+
 releases = urllib3.request(
     "GET", "https://www.python.org/api/v2/downloads/release/"
 ).json()
@@ -105,3 +122,5 @@ for release in releases:
 
     do_release(version, slug)
     do_sigstore(version)
+
+do_sigstore_identities()
