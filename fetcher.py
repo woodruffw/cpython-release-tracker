@@ -71,7 +71,7 @@ def do_release(version: Version, slug: str) -> None:
             {"url": artifact_url, "sha256": artifact_digest, "raw": artifact}
         )
 
-    output.write_text(json.dumps(cleaned_artifacts))
+    output.write_text(json.dumps(cleaned_artifacts, indent=4))
 
 
 def do_sigstore(version: Version) -> None:
@@ -92,7 +92,7 @@ def do_sigstore(version: Version) -> None:
         bundle = urllib3.request("GET", sigstore_url).json()
         artifact["sigstore"] = bundle
 
-    input.write_text(json.dumps(artifacts))
+    input.write_text(json.dumps(artifacts, indent=4))
 
 
 def do_sigstore_identities() -> None:
