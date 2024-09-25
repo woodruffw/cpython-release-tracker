@@ -89,8 +89,13 @@ def do_sigstore(version: Version) -> None:
             continue
 
         log(f"fetching bundle at {sigstore_url}")
-        bundle = urllib3.request("GET", sigstore_url).json()
-        artifact["sigstore"] = bundle
+        # Known 404s due to intentionally removed bundles:
+        # https://www.python.org/ftp/python/3.10.1/python3101.chm.sigstore
+        # https://www.python.org/ftp/python/3.10.11/python31011.chm.sigstore
+        resp = urllib3.request("GET", sigstore_url)
+        if resp.status != 200:
+            continue
+        artifact["sigstore"] = resp.json()
 
     input.write_text(json.dumps(artifacts, indent=4))
 
