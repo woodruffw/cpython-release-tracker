@@ -101,7 +101,7 @@ def do_sigstore(version: Version) -> None:
 
 
 def do_sigstore_identities() -> None:
-    sigstore_info = urllib3.request("GET", "https://www.python.org/download/sigstore/")
+    sigstore_info = urllib3.request("GET", "https://www.python.org/downloads/metadata/sigstore/")
     sigstore_info_doc = html.fromstring(sigstore_info.data)
 
     sigstore_table = sigstore_info_doc.xpath("//table")[0]
