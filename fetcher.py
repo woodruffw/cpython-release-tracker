@@ -1,10 +1,12 @@
-#!/usr/bin/env -S uv run --script
+#!/usr/bin/env -S uv run --prerelease=allow --script
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
 #     "urllib3",
 #     "lxml",
 #     "packaging",
+#     "sigstore-protobuf-specs",
+#     "sigstore ~= 3.6",
 # ]
 # ///
 
@@ -19,6 +21,10 @@ from pathlib import Path
 import urllib3
 from lxml import html
 from packaging.version import Version
+from sigstore.hashes import Hashed
+from sigstore.models import Bundle
+from sigstore.verify import Verifier, policy
+from sigstore_protobuf_specs.dev.sigstore.common.v1 import HashAlgorithm
 
 _VERSIONS = Path(__file__).parent / "versions"
 assert _VERSIONS.is_dir()
@@ -172,12 +178,42 @@ def do_consistency_check(version_file: Path) -> None:
     log(f"{version_file.stem}: consistency check passed")
 
 
+def do_verify(verifier: Verifier, idents: list[dict], version_file: Path) -> None:
+    log(f"verifying sigstore bundles for {version_file.stem}")
+
+    versions = json.loads(version_file.read_text())
+    for version in versions:
+        bundle = version.get("sigstore")
+        if not bundle:
+            continue
+
+        bundle = Bundle.from_json(json.dumps(bundle))
+
+        hashed = Hashed(
+            digest=bytes.fromhex(version["sha256"]), algorithm=HashAlgorithm.SHA2_256
+        )
+
+        ident_version = ".".join(version_file.stem.split(".")[0:2])
+        ident = next(
+            (ident for ident in idents if ident["Release"] == ident_version), None
+        )
+
+        if not ident:
+            raise ValueError(f"no signing identity found for {ident_version}")
+
+        pol = policy.Identity(
+            identity=ident["Release manager"], issuer=ident["OIDC Issuer"]
+        )
+
+        verifier.verify_artifact(input_=hashed, bundle=bundle, policy=pol)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--force", action="store_true")
     parser.add_argument(
         "--mode",
-        choices=["fetch", "consistency-check"],
+        choices=["fetch", "consistency-check", "verify"],
         default="fetch",
         help="the operation to perform",
     )
@@ -201,6 +237,11 @@ def main() -> None:
     elif args.mode == "consistency-check":
         for version_file in _VERSIONS.glob("*.json"):
             do_consistency_check(version_file)
+    elif args.mode == "verify":
+        verifier = Verifier.production()
+        idents = json.loads(_SIGNING_IDENTITIES.read_text())
+        for version_file in _VERSIONS.glob("*.json"):
+            do_verify(verifier, idents, version_file)
 
 
 if __name__ == "__main__":
