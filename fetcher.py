@@ -1,4 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "urllib3",
+#     "lxml",
+#     "packaging",
+# ]
+# ///
 
 # fetcher: fetch hashes for each Python version
 
@@ -101,7 +109,9 @@ def do_sigstore(version: Version) -> None:
 
 
 def do_sigstore_identities() -> None:
-    sigstore_info = urllib3.request("GET", "https://www.python.org/downloads/metadata/sigstore/")
+    sigstore_info = urllib3.request(
+        "GET", "https://www.python.org/downloads/metadata/sigstore/"
+    )
     sigstore_info_doc = html.fromstring(sigstore_info.data)
 
     sigstore_table = sigstore_info_doc.xpath("//table")[0]
