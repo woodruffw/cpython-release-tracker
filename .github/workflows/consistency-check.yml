@@ -1,0 +1,49 @@
+name: Perform consistency checks on CPython versions
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+  check-consistency:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+
+      - name: check for consistency
+        run: |
+          ./fetcher.py --mode=consistency-check
+
+      - name: generate an issue if consistency check fails
+        if: failure()
+        run: |
+          cat <<- EOF > /tmp/consistency-issue.md
+          ## Consistency check failure
+
+          A scheduled consistency check of the cached release data against
+          <python.org> has failed. This indicates a change in release files
+          over time, which may be innocuous or evidence of malicious tampering.
+
+          The full CI failure can be found here:
+
+          <${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/$GITHUB_RUN_ID>
+          EOF
+
+      - name: open an issue if the consistency check fails
+        if: failure()
+        uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd # v5.0.1
+        with:
+          title: "[CI] Consistency check failure"
+          # created in the previous step
+          content-filepath: /tmp/consistency-issue.md
+          labels: bug,component:cicd,component:tests
+          assignees: woodruffw
