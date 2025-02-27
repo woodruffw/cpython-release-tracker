@@ -155,6 +155,20 @@ def do_consistency_check(version_file: Path) -> None:
             f"MD5 sums for {version_file} do not match online release page"
         )
 
+    # Also check that the Sigstore bundle is the same, if present.
+    for version in versions:
+        sigstore_url = version["raw"].get("Sigstore")
+        if sigstore_url and sigstore_url.endswith(".sigstore"):
+            resp = urllib3.request("GET", sigstore_url)
+            if resp.status != 200:
+                continue
+            online_sigstore = resp.json()
+
+            if version.get("sigstore") != online_sigstore:
+                raise ValueError(
+                    f"Sigstore for {version_file.stem} does not match online release page"
+                )
+
     log(f"{version_file.stem}: consistency check passed")
 
 
