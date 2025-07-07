@@ -107,6 +107,12 @@ def do_sigstore(version: Version) -> None:
             continue
 
         sigstore_url = artifact["raw"]["Sigstore"]
+        if not sigstore_url:
+            # We might have 'null' for the bundle URL if our table
+            # entry is for a Windows release manifest; see e.g.
+            # https://www.python.org/downloads/release/python-3140b3/
+            continue
+
         if not sigstore_url.endswith(".sigstore"):
             # Some older releases contain only detached materials,
             # not combined bundles. We don't fetch those (yet?).
@@ -225,9 +231,14 @@ def main() -> None:
         ).json()
 
         for release in releases:
+            name = release["name"]
+            if "install manager" in name:
+                # Skip "install manager" releases, which are not actually Python releases.
+                continue
+
             # There's no version in the release JSON, so we infer it
             # from the name (`Python {version}`).
-            version = Version(release["name"].split(" ")[1])
+            version = Version(name.split(" ")[1])
             slug = release["slug"]
 
             do_release(version, slug, force=args.force)
