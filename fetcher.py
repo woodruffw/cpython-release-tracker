@@ -11,7 +11,6 @@
 # ///
 
 # fetcher: fetch hashes for each Python version
-
 import argparse
 import json
 import sys
@@ -58,7 +57,11 @@ def _release_table(release_url: str) -> list[dict]:
             else:
                 col_values.append(col.text)
 
-        artifacts.append(dict(zip(headers, col_values)))
+        artifact = dict(zip(headers, col_values))
+        if "MD5 Checksum" in artifact:
+            artifact["MD5 Sum"] = artifact.pop("MD5 Checksum")
+
+        artifacts.append(artifact)
 
     return artifacts
 
@@ -82,10 +85,6 @@ def do_release(version: Version, slug: str, force: bool = False) -> None:
     log(f"fetching {len(artifacts)} artifacts for {version}")
     cleaned_artifacts = []
     for artifact in artifacts:
-        # Normalize "MD5 Checksum" to "MD5 Sum"
-        if "MD5 Checksum" in artifact:
-            artifact["MD5 Sum"] = artifact.pop("MD5 Checksum")
-
         artifact_url = artifact["Version"]
         # TODO: Could stream into the hasher instead of buffering here.
         raw_artifact = urllib3.request("GET", artifact_url).data
