@@ -11,7 +11,6 @@
 # ///
 
 # fetcher: fetch hashes for each Python version
-
 import argparse
 import json
 import sys
@@ -58,7 +57,11 @@ def _release_table(release_url: str) -> list[dict]:
             else:
                 col_values.append(col.text)
 
-        artifacts.append(dict(zip(headers, col_values)))
+        artifact = dict(zip(headers, col_values))
+        if "MD5 Checksum" in artifact:
+            artifact["MD5 Sum"] = artifact.pop("MD5 Checksum")
+
+        artifacts.append(artifact)
 
     return artifacts
 
