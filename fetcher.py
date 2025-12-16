@@ -82,6 +82,10 @@ def do_release(version: Version, slug: str, force: bool = False) -> None:
     log(f"fetching {len(artifacts)} artifacts for {version}")
     cleaned_artifacts = []
     for artifact in artifacts:
+        # Normalize "MD5 Checksum" to "MD5 Sum"
+        if "MD5 Checksum" in artifact:
+            artifact["MD5 Sum"] = artifact.pop("MD5 Checksum")
+
         artifact_url = artifact["Version"]
         # TODO: Could stream into the hasher instead of buffering here.
         raw_artifact = urllib3.request("GET", artifact_url).data
