@@ -58,8 +58,29 @@ def _release_table(release_url: str) -> list[dict]:
                 col_values.append(col.text)
 
         artifact = dict(zip(headers, col_values))
+
+        # Normalize MD5 checksum key names.
         if "MD5 Checksum" in artifact:
             artifact["MD5 Sum"] = artifact.pop("MD5 Checksum")
+        if "MD5 checksum" in artifact:
+            artifact["MD5 Sum"] = artifact.pop("MD5 checksum")
+
+        # Normalize SHA256 checksum key names.
+        if "SHA256 Checksum" in artifact:
+            artifact["SHA256 Sum"] = artifact.pop("SHA256 Checksum")
+        if "SHA-256 Checksum" in artifact:
+            artifact["SHA256 Sum"] = artifact.pop("SHA-256 Checksum")
+
+        # Newer releases have a SHA256, but older ones are backfilled
+        # with "n/a"; remove those.
+        if artifact.get("SHA256 Sum") == "n/a":
+            artifact.pop("SHA256 Sum")
+
+        # Normalize both checksums to lowercase.
+        if "MD5 Sum" in artifact:
+            artifact["MD5 Sum"] = artifact["MD5 Sum"].lower()
+        if "SHA256 Sum" in artifact:
+            artifact["SHA256 Sum"] = artifact["SHA256 Sum"].lower()
 
         artifacts.append(artifact)
 
@@ -98,7 +119,7 @@ def do_release(version: Version, slug: str, force: bool = False) -> None:
             }
         )
 
-    output.write_text(json.dumps(cleaned_artifacts, indent=4))
+    output.write_text(json.dumps(cleaned_artifacts, indent=4, sort_keys=True))
 
 
 def do_sigstore(version: Version) -> None:
@@ -130,7 +151,7 @@ def do_sigstore(version: Version) -> None:
             continue
         artifact["sigstore"] = resp.json()
 
-    input.write_text(json.dumps(artifacts, indent=4))
+    input.write_text(json.dumps(artifacts, indent=4, sort_keys=True))
 
 
 def do_sigstore_identities() -> None:
@@ -162,12 +183,25 @@ def do_consistency_check(version_file: Path) -> None:
     release_url = versions[0]["release_url"]
 
     artifacts = _release_table(release_url)
-    online_sums = {artifact["MD5 Sum"] for artifact in artifacts}
-    cached_sums = {version["raw"]["MD5 Sum"] for version in versions}
+
+    online_sums = set()
+    for artifact in artifacts:
+        if md5 := artifact.get("MD5 Sum"):
+            online_sums.add(f"md5:{md5}")
+        if sha256 := artifact.get("SHA256 Checksum"):
+            online_sums.add(f"sha256:{sha256}")
+
+    cached_sums = set()
+    for version in versions:
+        raw = version["raw"]
+        if md5 := raw.get("MD5 Sum"):
+            cached_sums.add(f"md5:{md5}")
+        if sha256 := raw.get("SHA256 Checksum"):
+            cached_sums.add(f"sha256:{sha256}")
 
     if online_sums != cached_sums:
         raise ValueError(
-            f"MD5 sums for {version_file} do not match online release page"
+            f"Checksums sums for {version_file} do not match online release page: {online_sums} != {cached_sums}"
         )
 
     # Also check that the Sigstore bundle is the same, if present.
