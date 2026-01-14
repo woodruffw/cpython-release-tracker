@@ -77,10 +77,10 @@ def _release_table(release_url: str) -> list[dict]:
             artifact.pop("SHA256 Sum")
 
         # Normalize both checksums to lowercase.
-        if "MD5 Sum" in artifact:
-            artifact["MD5 Sum"] = artifact["MD5 Sum"].lower()
-        if "SHA256 Sum" in artifact:
-            artifact["SHA256 Sum"] = artifact["SHA256 Sum"].lower()
+        if md5 := artifact.get("MD5 Sum"):
+            artifact["MD5 Sum"] = md5.lower()
+        if sha256 := artifact.get("SHA256 Sum"):
+            artifact["SHA256 Sum"] = sha256.lower()
 
         artifacts.append(artifact)
 
