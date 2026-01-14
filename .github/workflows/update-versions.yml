@@ -1,8 +1,13 @@
 name: check for new CPython versions
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Force update check for versions that are already cached"
+        required: false
+        default: "false"
   schedule:
-    - cron: '0 12 * * *'
+    - cron: "0 12 * * *"
 
 jobs:
   check-versions:
@@ -21,7 +26,13 @@ jobs:
 
       - name: check for new versions
         run: |
-          ./fetcher.py
+          if [[ "${FORCE}" = 'true' ]]; then
+            ./fetcher.py --force
+          else
+            ./fetcher.py
+          fi
+        env:
+          FORCE: ${{ github.event.inputs.force || 'false' }}
 
       - name: create PR
         uses: peter-evans/create-pull-request@v6
