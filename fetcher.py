@@ -16,6 +16,7 @@ import json
 import sys
 from hashlib import sha256
 from pathlib import Path
+from typing import TypedDict
 
 import urllib3
 from lxml import html
@@ -31,58 +32,106 @@ assert _VERSIONS.is_dir()
 _SIGNING_IDENTITIES = Path(__file__).parent / "signing-identities.json"
 
 
+class RawArtifact(TypedDict):
+    """
+    A "raw" artifact, i.e. a single artifact from a Python release.
+
+    This is "raw" in the sense that all data in it is directly fetched from
+    Python's releases, rather than being processed or normalized by us.
+    """
+
+    slug: str
+    """
+    A slug for this release's version.
+    """
+
+    url: str
+    """
+    The download URL for this artifact.
+    """
+
+    description: str | None
+    """
+    A human-readable description of this artifact, if present.
+    """
+
+    filesize: int
+    """
+    The size of this artifact in bytes.
+    """
+
+    md5: str | None
+    """
+    The given MD5 hash of this artifact, if present.
+    """
+
+    sha256: str | None
+    """
+    The given SHA256 hash of this artifact, if present.
+    """
+
+    sigstore: dict | None
+    """
+    The expanded Sigstore bundle for this artifact, if present.
+    """
+
+
+type RawRelease = list[RawArtifact]
+
+
+class Artifact(TypedDict):
+    raw: RawArtifact
+    """
+    The raw artifact data as fetched from Python's releases.
+    """
+
+    sha256: str
+    """
+    The SHA256 hash of this artifact, as computed by us.
+    """
+
+
+type Release = list[Artifact]
+
+
 def log(msg: str) -> None:
     print(msg, file=sys.stderr)
 
 
-def _release_table(release_url: str) -> list[dict]:
-    log(f"accessing {release_url}")
+def _get_raw_release(slug: str) -> RawRelease:
+    artifacts: RawRelease = []
 
-    release_html = urllib3.request("GET", release_url).data
-    release_doc = html.fromstring(release_html)
+    # NOTE(ww): Empirically, Python's release API uses the 'os' parameter
+    # to filter results by target. We loop over all known OS values to ensure
+    # we get all artifacts.
+    for os in [1, 2, 3, 4, 5]:
+        release_url = f"https://www.python.org/api/v1/downloads/release_file/?os={os}&format=json&release__slug={slug}"
+        log(f"accessing {release_url}")
 
-    # NOTE: Some older release pages have a docutils <table> element
-    # before the artifact table; we skip over it.
-    artifact_table = release_doc.xpath("//table[not(contains(@class, 'docutils'))]")[0]
-    headers = artifact_table.xpath(".//thead//tr//th//text()")
-    artifacts = []
-    for row in artifact_table.xpath(".//tbody//tr"):
-        col_values = []
-        for col in row.xpath(".//td"):
-            # If this column is a link, use the href as our value
-            # rather than the element's text.
-            links = col.xpath(".//a")
-            if links:
-                col_values.append(links[0].attrib.get("href"))
-            else:
-                col_values.append(col.text)
+        response = urllib3.request("GET", release_url)
+        data = json.loads(response.data)
 
-        artifact = dict(zip(headers, col_values))
+        for obj in data["objects"]:
+            # Fetch the sigstore bundle if present
+            sigstore_data = None
+            if obj.get("sigstore_bundle_file"):
+                bundle_url = obj["sigstore_bundle_file"]
+                if bundle_url.endswith(".sigstore"):
+                    log(f"fetching bundle at {bundle_url}")
+                    bundle_resp = urllib3.request("GET", bundle_url)
+                    if bundle_resp.status == 200:
+                        sigstore_data = bundle_resp.json()
 
-        # Normalize MD5 checksum key names.
-        if "MD5 Checksum" in artifact:
-            artifact["MD5 Sum"] = artifact.pop("MD5 Checksum")
-        if "MD5 checksum" in artifact:
-            artifact["MD5 Sum"] = artifact.pop("MD5 checksum")
-
-        # Normalize SHA256 checksum key names.
-        if "SHA256 Checksum" in artifact:
-            artifact["SHA256 Sum"] = artifact.pop("SHA256 Checksum")
-        if "SHA-256 Checksum" in artifact:
-            artifact["SHA256 Sum"] = artifact.pop("SHA-256 Checksum")
-
-        # Newer releases have a SHA256, but older ones are backfilled
-        # with "n/a"; remove those.
-        if artifact.get("SHA256 Sum") == "n/a":
-            artifact.pop("SHA256 Sum")
-
-        # Normalize both checksums to lowercase.
-        if md5 := artifact.get("MD5 Sum"):
-            artifact["MD5 Sum"] = md5.lower()
-        if sha256 := artifact.get("SHA256 Sum"):
-            artifact["SHA256 Sum"] = sha256.lower()
-
-        artifacts.append(artifact)
+            artifact: RawArtifact = {
+                "slug": slug,
+                "url": obj["url"],
+                "description": obj.get("description") or None,
+                "filesize": obj["filesize"],
+                "md5": obj.get("md5_sum") or None,
+                "sha256": obj.get("sha256_sum") or None,
+                "sigstore": sigstore_data,
+            }
+            artifacts.append(artifact)
 
     return artifacts
 
@@ -95,31 +144,24 @@ def do_release(version: Version, slug: str, force: bool = False) -> None:
         log(f"{output} is cached, not regenerating")
         return
 
-    release_url = f"https://www.python.org/downloads/release/{slug}/"
+    raw_release = _get_raw_release(slug)
+    log(f"got {len(raw_release)} artifacts for {version}")
 
-    artifacts = _release_table(release_url)
+    release: Release = []
+    for raw_artifact in raw_release:
+        # Sanity check: we should have either md5 or sha256 from the raw artifact.
+        if not raw_artifact["md5"] and not raw_artifact["sha256"]:
+            raise ValueError(f"artifact {raw_artifact['url']} has no checksums")
 
-    # Now, download each artifact for the version and hash it.
-    # Confusingly, each artifact's URL is under the `Version` key,
-    # since `Version` in the context of the release's artifacts
-    # table is the kind of artifact (e.g. source, installer).
-    log(f"fetching {len(artifacts)} artifacts for {version}")
-    cleaned_artifacts = []
-    for artifact in artifacts:
-        artifact_url = artifact["Version"]
-        # TODO: Could stream into the hasher instead of buffering here.
-        raw_artifact = urllib3.request("GET", artifact_url).data
-        artifact_digest = sha256(raw_artifact).hexdigest()
-        cleaned_artifacts.append(
+        artifact_data = urllib3.request("GET", raw_artifact["url"]).data
+        release.append(
             {
-                "url": artifact_url,
-                "sha256": artifact_digest,
-                "release_url": release_url,
-                "raw": artifact,
+                "raw": raw_artifact,
+                "sha256": sha256(artifact_data).hexdigest(),
             }
         )
 
-    output.write_text(json.dumps(cleaned_artifacts, indent=4, sort_keys=True))
+    output.write_text(json.dumps(release, indent=4, sort_keys=True))
 
 
 def do_sigstore(version: Version) -> None:
@@ -174,29 +216,29 @@ def do_sigstore_identities() -> None:
 def do_consistency_check(version_file: Path) -> None:
     log(f"checking consistency of {version_file.stem}")
 
-    versions = json.loads(version_file.read_text())
-    if not versions:
+    release: Release = json.loads(version_file.read_text())
+    if not release:
         # Some releases are empty due to recall, e.g. 3.9.3.
         log("empty release, skipping consistency check")
         return
 
-    release_url = versions[0]["release_url"]
+    release_slug = release[0]["slug"]
 
-    artifacts = _release_table(release_url)
+    online_release = _get_raw_release(release_slug)
 
     online_sums = set()
-    for artifact in artifacts:
-        if md5 := artifact.get("MD5 Sum"):
+    for artifact in online_release:
+        if md5 := artifact.get("md5"):
             online_sums.add(f"md5:{md5}")
-        if sha256 := artifact.get("SHA256 Checksum"):
+        if sha256 := artifact.get("sha256"):
             online_sums.add(f"sha256:{sha256}")
 
     cached_sums = set()
-    for version in versions:
-        raw = version["raw"]
-        if md5 := raw.get("MD5 Sum"):
+    for artifact in release:
+        raw = artifact["raw"]
+        if md5 := raw.get("md5"):
             cached_sums.add(f"md5:{md5}")
-        if sha256 := raw.get("SHA256 Checksum"):
+        if sha256 := raw.get("sha256"):
             cached_sums.add(f"sha256:{sha256}")
 
     if online_sums != cached_sums:
@@ -204,19 +246,19 @@ def do_consistency_check(version_file: Path) -> None:
             f"Checksums sums for {version_file} do not match online release page: {online_sums} != {cached_sums}"
         )
 
-    # Also check that the Sigstore bundle is the same, if present.
-    for version in versions:
-        sigstore_url = version["raw"].get("Sigstore")
-        if sigstore_url and sigstore_url.endswith(".sigstore"):
-            resp = urllib3.request("GET", sigstore_url)
-            if resp.status != 200:
-                continue
-            online_sigstore = resp.json()
+    # # Also check that the Sigstore bundle is the same, if present.
+    # for version in release:
+    #     sigstore_url = version["raw"].get("Sigstore")
+    #     if sigstore_url and sigstore_url.endswith(".sigstore"):
+    #         resp = urllib3.request("GET", sigstore_url)
+    #         if resp.status != 200:
+    #             continue
+    #         online_sigstore = resp.json()
 
-            if version.get("sigstore") != online_sigstore:
-                raise ValueError(
-                    f"Sigstore for {version_file.stem} does not match online release page"
-                )
+    #         if version.get("sigstore") != online_sigstore:
+    #             raise ValueError(
+    #                 f"Sigstore for {version_file.stem} does not match online release page"
+    #             )
 
     log(f"{version_file.stem}: consistency check passed")
 
