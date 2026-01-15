@@ -222,7 +222,7 @@ def do_consistency_check(version_file: Path) -> None:
         log("empty release, skipping consistency check")
         return
 
-    release_slug = release[0]["slug"]
+    release_slug = release[0]["raw"]["slug"]
 
     online_release = _get_raw_release(release_slug)
 
