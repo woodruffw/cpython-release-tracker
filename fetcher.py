@@ -5,8 +5,7 @@
 #     "urllib3",
 #     "lxml",
 #     "packaging",
-#     "sigstore-protobuf-specs",
-#     "sigstore ~= 3.6",
+#     "sigstore == 4.5.0",
 # ]
 # ///
 
@@ -24,7 +23,6 @@ from packaging.version import Version
 from sigstore.hashes import Hashed
 from sigstore.models import Bundle
 from sigstore.verify import Verifier, policy
-from sigstore_protobuf_specs.dev.sigstore.common.v1 import HashAlgorithm
 
 _VERSIONS = Path(__file__).parent / "versions"
 assert _VERSIONS.is_dir()
@@ -260,9 +258,7 @@ def do_verify(verifier: Verifier, idents: list[dict], version_file: Path) -> Non
 
         bundle = Bundle.from_json(json.dumps(bundle))
 
-        hashed = Hashed(
-            digest=bytes.fromhex(version["sha256"]), algorithm=HashAlgorithm.SHA2_256
-        )
+        hashed = Hashed(digest=bytes.fromhex(version["sha256"]), algorithm="SHA2_256")
 
         ident_version = ".".join(version_file.stem.split(".")[0:2])
         ident = next(
