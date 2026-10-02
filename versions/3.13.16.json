@@ -1,0 +1,802 @@
+[
+    {
+        "raw": {
+            "description": null,
+            "filesize": 10179793,
+            "md5": null,
+            "sha256": "0a3b162281b0a8e4d95d748e40ec2db9927086c7ec4231a5c8d29f91a1c2ba89",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "CjsWIoGwqOTZXXSOQOwtuZJwhsfsQjGlyNKfkaHCuok="
+                    },
+                    "signature": "MEUCICPvWCb0QjPrtpoCkri64Z7CiJNCnLPqt4iO9GWHyt8pAiEAm/6HzM0kliUMMNLS0yH7DlfKEoChzdOnZ4ReHil3LWc="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJTCCAqygAwIBAgIUA8aw/SQhOJr25YrwpctDHqaocRAwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjEzWhcNMjYwOTMwMjIwNjEzWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkfFfFeqXDCoEicSvQFo+dbDlx9VyTnT69OKuE0SZbRI56yBELgWobPyjJuY+0vIdeK+6gIirowoiohDSDiVeYKOCAcswggHHMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUvvgETNgC5QVlxju5twsmIYG6d+4wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGJBgorBgEEAdZ5AgQCBHsEeQB3AHUA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FFw6AAABAMARjBEAiBaEKe32lbHy3Kw1fWGPR69XYMI8Gsnx6KpQem2uYiCcQIgHA020bDyi5H498DWb+OzREZAU4hCOAtsdm9WruiEOHYwCgYIKoZIzj0EAwMDZwAwZAIwQqTH0soRnK3CyxU391ET8bk8enO5mbVuhowM+G9Hfa6f23yndc94yFFWOLo26tuFAjAmkgEmA1v1y5D6X6XnMstOuFaM+KQUbN4NNWVxTfNRi8EDvMrhwpbcJ1YWZu8KuRw="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6jADAgEAMIIE4QYJKoZIhvcNAQcCoIIE0jCCBM4CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgxuUHfupNyrR0oeDYw/fq3KGAxFaxbQi1IIsSaQPUStkCFCzBuQ5mqCf6pzzF1pAZrvyatSU/GA8yMDI2MDkzMDIxNTYxM1owAwIBAQIJAL5GPI5qbu/UoDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB2zCCAdcCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTU2MTNaMC8GCSqGSIb3DQEJBDEiBCC0x97hyRxdN6+6g5k6WLp20vWL31vqLtmMzqoPBQqvajCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEZzBlAjEA3m5dua308bN/Sc1N3zuB0c/Pv1mZ3qnKHLfZIvuqgdq5mKZIWdLm1Ouh3EZf87DJAjALkr2NnRelUiN34KJCV4069zsU1rjoaZ+hShKhSalNkzuUl6BXTUBGn5gS+vadFHI="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIwYTNiMTYyMjgxYjBhOGU0ZDk1ZDc0OGU0MGVjMmRiOTkyNzA4NmM3ZWM0MjMxYTVjOGQyOWY5MWExYzJiYTg5In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJQ1B2V0NiMFFqUHJ0cG9Da3JpNjRaN0NpSk5DbkxQcXQ0aU85R1dIeXQ4cEFpRUFtLzZIek0wa2xpVU1NTkxTMHlIN0RsZktFb0NoemRPblo0UmVIaWwzTFdjPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktWRU5EUVhGNVowRjNTVUpCWjBsVlFUaGhkeTlUVVdoUFNuSXlOVmx5ZDNCamRFUkljV0Z2WTFKQmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBGZWxkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtWNlYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZyWmtabVJtVnhXRVJEYjBWcFkxTjJVVVp2SzJSaVJHeDRPVlo1Vkc1VU5qbFBTM1VLUlRCVFdtSlNTVFUyZVVKRlRHZFhiMkpRZVdwS2RWa3JNSFpKWkdWTEt6Wm5TV2x5YjNkdmFXOW9SRk5FYVZabFdVdFBRMEZqYzNkblowaElUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlYyZG1kRkNsUk9aME0xVVZac2VHcDFOWFIzYzIxSldVYzJaQ3MwZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwcENaMjl5UW1kRlJVRmtXalZCWjFGRFFraHpSV1ZSUWpOQlNGVkJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1JuYzJRVUZCUWtGTlFWSnFRa1VLUVdsQ1lVVkxaVE15YkdKSWVUTkxkekZtVjBkUVVqWTVXRmxOU1RoSGMyNTROa3R3VVdWdE1uVlphVU5qVVVsblNFRXdNakJpUkhscE5VZzBPVGhFVndwaUswOTZVa1ZhUVZVMGFFTlBRWFJ6WkcwNVYzSjFhVVZQU0ZsM1EyZFpTVXR2V2tsNmFqQkZRWGROUkZwM1FYZGFRVWwzVVhGVVNEQnpiMUp1U3pORENubDRWVE01TVVWVU9HSnJPR1Z1VHpWdFlsWjFhRzkzVFN0SE9VaG1ZVFptTWpONWJtUmpPVFI1UmtaWFQweHZNalowZFVaQmFrRnRhMmRGYlVFeGRqRUtlVFZFTmxnMldHNU5jM1JQZFVaaFRTdExVVlZpVGpST1RsZFdlRlJtVGxKcE9FVkVkazF5YUhkd1ltTktNVmxYV25VNFMzVlNkejBLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0=",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEYCIQDS18BqJIk4ntt7dX6ChcKDW9eVPHlArsLGAAJ0Bjf9RwIhAPtoL5xMyRKZ2Sx325aBTbEz7QlW3K6bViteTcnT0P80"
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903959561\n/2tUmgS82OOJlMjeHRroZ2XfRKU6KXpoY390mg70JoA=\n\n\u2014 rekor.sigstore.dev wNI9ajBFAiA1bisHSp0UgYoNvanASqnxshiFhIw6tazotBMe/ufyUgIhAMHVneZFKxzewsRhhnma/z0J7DyFIbfGgpCBtNnQ3ENl\n"
+                                },
+                                "hashes": [
+                                    "acdCiTym/p5LXZNa43iGhLxKi29qI0dbvdjEqyYZW2E=",
+                                    "lA1aIz9cmuSctwGjoYwtibj3kTbwzDNtXdehxyq88Xc=",
+                                    "Qa1FB0zunXM3rD3OzBt16ZiqDLAAzY3pewGroZN0CsI=",
+                                    "6Wjv63JlnSaw2Sd6JI/dsdDkVozXk+gAo4AONAmCa64=",
+                                    "Z+sNddtvT4WirNqokQv2f1sqRINQGYZC/FoZI9BKOK0=",
+                                    "QkmaztPZNbOjbzc7qvCWDEsSpltC8ZplGLA6D95LXdU=",
+                                    "YGEa5k3o2h70FfZOGCEHQNCQp9PccgOsbYG6zJZl7w0=",
+                                    "QxbAGRIaiQRyjQV58q+066ujkhl2kDl/7Xv1MnpgPUY=",
+                                    "pnRSSBPDFjbNcsBb2Py3Xx+l5OGuJdd+Wx6cQUTTToI=",
+                                    "bGQQ13EkLlnw6Ohu2sbypAu0r2Kmo/TiePqZmT0eKbA=",
+                                    "8xJMVd0C/X0YYvEywcaZ/Bf4PqjlwdpP+jvXtm22vdY=",
+                                    "P/prj3AYRhuh0CpB194peINCFnhA9g3Q2O6iDNq8plA=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903959551",
+                                "rootHash": "/2tUmgS82OOJlMjeHRroZ2XfRKU6KXpoY390mg70JoA=",
+                                "treeSize": "2903959561"
+                            },
+                            "integratedTime": "1790805373",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025863813"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16-embed-win32.zip"
+        },
+        "sha256": "0a3b162281b0a8e4d95d748e40ec2db9927086c7ec4231a5c8d29f91a1c2ba89"
+    },
+    {
+        "raw": {
+            "description": null,
+            "filesize": 11439094,
+            "md5": null,
+            "sha256": "97dae5274cc54867065e8d5a3226e48c35017ed332a0fdb0e27d5b5821961297",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "l9rlJ0zFSGcGXo1aMibkjDUBftMyoP2w4n1bWCGWEpc="
+                    },
+                    "signature": "MEUCIQC3j+5UWf74GE5EAxzu0fpTdCC8hngoCVROfJLthdzmNwIgZn06TxmdmfSiX34yKJ4WD0Urd8KlWcA7RgMV70z3/WE="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDKDCCAq2gAwIBAgIUHlQ+RXZfFHWMgD62nNbJtjM7VbEwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjA5WhcNMjYwOTMwMjIwNjA5WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeDp8Y0I/5Q3Ih9JDbjcTPYU0/4bxaXU56fQtgr1n2cBPUgPVSde/IJ7VGWA4uMNi/MF/dyy+b/TbydR11CEFzKOCAcwwggHIMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUL3khxxmxnGyJuXMElWwisYdLsB4wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGKBgorBgEEAdZ5AgQCBHwEegB4AHYA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FFi2gAABAMARzBFAiAorl/kXbOSnN3Uw8zzoBvXVv8fYrkUySGxp8FsNmQcQAIhAJ6AJ/OWo6I44RK+GAeTYwMn9Zg7BCKgOO9oGpp4Eq1wMAoGCCqGSM49BAMDA2kAMGYCMQDrqhMukAAmhTXcUSDEcBC9/CrjwSbDGNsdLktmD9f0jR3yNM3wEWb5TkRdC3ZjFZYCMQCVVFqKuYHK5pj0PYNN1UVheQ9vJ7oCUbXhhpClQH1FJYZhhMiQk3QuvrlOOK7e+70="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6jADAgEAMIIE4QYJKoZIhvcNAQcCoIIE0jCCBM4CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgrefFXzjADYnOGjWWzElm36OHzvDyAlD8weW30KbmyawCFQD0PBKi1ed5Irm0ZMkuigTKvV98tRgPMjAyNjA5MzAyMTU2MDlaMAMCAQECCA2aqOtaL2cqoDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB2zCCAdcCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTU2MDlaMC8GCSqGSIb3DQEJBDEiBCDvXEbHfRiODvofH4dvp01FdQhgNZ6UdaWmuvnbSgusljCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEZzBlAjEA+whfbOA+OSL/+5g9KZumuu2lgujvlZ4piFII9QKydkIMlO1fElZgxh7otzyuiRpGAjBdQEeUn7PrA2HnRF8ulXB/IHZP80kRDYerwiPaGjFcZ+SpQ0bbN8jTp9/XsZczLPQ="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiI5N2RhZTUyNzRjYzU0ODY3MDY1ZThkNWEzMjI2ZTQ4YzM1MDE3ZWQzMzJhMGZkYjBlMjdkNWI1ODIxOTYxMjk3In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJUUMzais1VVdmNzRHRTVFQXh6dTBmcFRkQ0M4aG5nb0NWUk9mSkx0aGR6bU53SWdabjA2VHhtZG1mU2lYMzR5S0o0V0QwVXJkOEtsV2NBN1JnTVY3MHozL1dFPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUkxSRU5EUVhFeVowRjNTVUpCWjBsVlNHeFJLMUpZV21aR1NGZE5aMFEyTW01T1lrcDBhazAzVm1KRmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBCTlZkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtFMVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZsUkhBNFdUQkpMelZSTTBsb09VcEVZbXBqVkZCWlZUQXZOR0o0WVZoVk5UWm1VWFFLWjNJeGJqSmpRbEJWWjFCV1UyUmxMMGxLTjFaSFYwRTBkVTFPYVM5TlJpOWtlWGtyWWk5VVlubGtVakV4UTBWR2VrdFBRMEZqZDNkblowaEpUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZNTTJ0b0NuaDRiWGh1UjNsS2RWaE5SV3hYZDJseldXUk1jMEkwZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwdENaMjl5UW1kRlJVRmtXalZCWjFGRFFraDNSV1ZuUWpSQlNGbEJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1Jta3laMEZCUWtGTlFWSjZRa1lLUVdsQmIzSnNMMnRZWWs5VGJrNHpWWGM0ZW5wdlFuWllWblk0WmxseWExVjVVMGQ0Y0RoR2MwNXRVV05SUVVsb1FVbzJRVW92VDFkdk5razBORkpMS3dwSFFXVlVXWGROYmpsYVp6ZENRMHRuVDA4NWIwZHdjRFJGY1RGM1RVRnZSME5EY1VkVFRUUTVRa0ZOUkVFeWEwRk5SMWxEVFZGRWNuRm9UWFZyUVVGdENtaFVXR05WVTBSRlkwSkRPUzlEY21wM1UySkVSMDV6WkV4cmRHMUVPV1l3YWxJemVVNU5NM2RGVjJJMVZHdFNaRU16V21wR1dsbERUVkZEVmxaR2NVc0tkVmxJU3pWd2FqQlFXVTVPTVZWV2FHVlJPWFpLTjI5RFZXSllhR2h3UTJ4UlNERkdTbGxhYUdoTmFWRnJNMUYxZG5Kc1QwOUxOMlVyTnpBOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEUCIQCyyOOd7spqF3cdZhQF+i+Wjdtsu43bVHlzwu0xE7AqewIgSTxyiQw5FdKyNWiVYcHegm6g7tgF/72cWWIfL8uagPQ="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903958878\n0PDVZaIw/sRJYYG1FIFhVtG/l7irujXos+C3uwGIXyg=\n\n\u2014 rekor.sigstore.dev wNI9ajBEAiAgeGKTZS6pXIdbh9PDOfoAB1D4VB0dT288msMig5fisgIgHH0C68+pU5l+ICWC2hUGowAqXJoGGP8ZP5TZer7Q510=\n"
+                                },
+                                "hashes": [
+                                    "lGT5jAE8WjrtP8gOCDepYI3REMsi9MOZMVDjk/WVVI8=",
+                                    "rJV0LoIg7IQH8HSIjc1H7e9sr44FCnr1SR/iwrRkWAU=",
+                                    "usdnws9wGn1d9DXBLEfkDPd+q6n7rMGhs6saoaX2cJU=",
+                                    "S/rrz5gdM1uqYM2/WbIzqwj+9qE/ckPpaUauau7pyyo=",
+                                    "7P+NAKxQLs7z1sZAwK1H0lQYltEFP26N8NrkL2aE29k=",
+                                    "kBZ+r2vYzgOfoMJ98D0dR3jlk7KezFNpiahAsHim4RA=",
+                                    "CAK+jAaGGjCgalXcdK8MRhXC76JbbS44ffE/tK4Y5EY=",
+                                    "8xJMVd0C/X0YYvEywcaZ/Bf4PqjlwdpP+jvXtm22vdY=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903958861",
+                                "rootHash": "0PDVZaIw/sRJYYG1FIFhVtG/l7irujXos+C3uwGIXyg=",
+                                "treeSize": "2903958878"
+                            },
+                            "integratedTime": "1790805369",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025863123"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16-embed-amd64.zip"
+        },
+        "sha256": "97dae5274cc54867065e8d5a3226e48c35017ed332a0fdb0e27d5b5821961297"
+    },
+    {
+        "raw": {
+            "description": null,
+            "filesize": 10815123,
+            "md5": null,
+            "sha256": "790d097697a2020477549a6764d89d22194c88d6e42caebcb2db63791e004c94",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "eQ0JdpeiAgR3VJpnZNidIhlMiNbkLK68sttjeR4ATJQ="
+                    },
+                    "signature": "MEQCIBOVJlO/8o3QDPcnYHq6sEZTrYpdKqPGP+GQXxFvehZXAiAGcMx2nQvFk0hqbyKQ9ea9XO+mh/RrcNSBgvZwymXv5w=="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJjCCAq2gAwIBAgIUHIz5AhI5B7KPhPC0ZVVsFal6kgQwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjExWhcNMjYwOTMwMjIwNjExWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELCBUcdgGxeadw1fmxHrV91Pv7xh5dM5AEnqUuYytaqrZg3qq6U1pGdIXIsEvA24GvIhwKGV66Q+AmXS1DHi2A6OCAcwwggHIMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUSqPLmzf9LyH5nORB18L3qUfL97kwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGKBgorBgEEAdZ5AgQCBHwEegB4AHYA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FFpNwAABAMARzBFAiEAuqEzdtdd8tQ3B1ufnb3hdmInztUhEK8c6msIbhFMoBgCIBLkRTmxBhKJAxOyl4Ny+VI5N5ClllenZH+ggyAvjhSpMAoGCCqGSM49BAMDA2cAMGQCMAif0n1GlTZx8Dk4JHHJ9bFaUpxYk5cTw4BQ4L61bdKT24FIKUIyEVQceO+649AelgIwakgepwsnVmfzrs99LFLtV41p8ty2uA04WEgOEsv+XfM3I9wd6XU5z0a0evz14K1W"
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6jADAgEAMIIE4QYJKoZIhvcNAQcCoIIE0jCCBM4CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgHb53kijIj1uXHBEzhurh+6bH6LcTQcGnaFPoUHTgmI4CFQCmxWcgpMWve+C2DpYoCUazrvsXPRgPMjAyNjA5MzAyMTU2MTFaMAMCAQECCBUj4HPFeN5eoDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB2zCCAdcCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTU2MTFaMC8GCSqGSIb3DQEJBDEiBCA50IEnUcQPZEJTI9fNjzhlifZk8+zzkH2ew/7X3yTwijCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEZzBlAjAv2GB++3dgHn3ZmDlGjqh82B5941Y4JuPm3yfghWNPgbCzJEjd1cVqhxGMkmuYIJ4CMQDgTgpVtwqqwOjAcos9y2DFGPZJkxH+1roB4H6aeYZb+0kfRkvfZqhS7y9IMQa4nWo="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiI3OTBkMDk3Njk3YTIwMjA0Nzc1NDlhNjc2NGQ4OWQyMjE5NGM4OGQ2ZTQyY2FlYmNiMmRiNjM3OTFlMDA0Yzk0In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FUUNJQk9WSmxPLzhvM1FEUGNuWUhxNnNFWlRyWXBkS3FQR1ArR1FYeEZ2ZWhaWEFpQUdjTXgyblF2RmswaHFieUtROWVhOVhPK21oL1JyY05TQmd2Wnd5bVh2NXc9PSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktha05EUVhFeVowRjNTVUpCWjBsVlNFbDZOVUZvU1RWQ04wdFFhRkJETUZwV1ZuTkdZV3cyYTJkUmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBGZUZkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtWNFYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZNUTBKVlkyUm5SM2hsWVdSM01XWnRlRWh5VmpreFVIWTNlR2cxWkUwMVFVVnVjVlVLZFZsNWRHRnhjbHBuTTNGeE5sVXhjRWRrU1ZoSmMwVjJRVEkwUjNaSmFIZExSMVkyTmxFclFXMVlVekZFU0dreVFUWlBRMEZqZDNkblowaEpUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZUY1ZCTUNtMTZaamxNZVVnMWJrOVNRakU0VEROeFZXWk1PVGRyZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwdENaMjl5UW1kRlJVRmtXalZCWjFGRFFraDNSV1ZuUWpSQlNGbEJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1JuQk9kMEZCUWtGTlFWSjZRa1lLUVdsRlFYVnhSWHBrZEdSa09IUlJNMEl4ZFdadVlqTm9aRzFKYm5wMFZXaEZTemhqTm0xelNXSm9SazF2UW1kRFNVSk1hMUpVYlhoQ2FFdEtRWGhQZVFwc05FNTVLMVpKTlU0MVEyeHNiR1Z1V2tncloyZDVRWFpxYUZOd1RVRnZSME5EY1VkVFRUUTVRa0ZOUkVFeVkwRk5SMUZEVFVGcFpqQnVNVWRzVkZwNENqaEVhelJLU0VoS09XSkdZVlZ3ZUZsck5XTlVkelJDVVRSTU5qRmlaRXRVTWpSR1NVdFZTWGxGVmxGalpVOHJOalE1UVdWc1owbDNZV3RuWlhCM2MyNEtWbTFtZW5Kek9UbE1Sa3gwVmpReGNEaDBlVEoxUVRBMFYwVm5UMFZ6ZGl0WVprMHpTVGwzWkRaWVZUVjZNR0V3WlhaNk1UUkxNVmNLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0=",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEQCIFJzEU8LfYdZ6kWHdD9c6dEBlrUfWnKr0QmWWICn+o9lAiB8H8xBvOKLIB35vi0BZBt/UZh1pPGc9hddAYIxOPoRxg=="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903959216\nq7tTWAlSeKOB6dJ6XNJrupEEt4f1jUsUlNHbWlo54jE=\n\n\u2014 rekor.sigstore.dev wNI9ajBGAiEA4O26s+Y5xAmT6h0g6NUpm1t+JuSDxJFKn8oLvaY6chACIQCL6Hq5WztNouzpqQBzSE9Uj1QAzB/urtu92wPWpPyLJA==\n"
+                                },
+                                "hashes": [
+                                    "xjUDuzAmNo2/oq+NMrIspeoHnCRuokWB6P8p165y3Ic=",
+                                    "mOQWxn4KUrQGLkR1TxICzK0478jGxG7FxbZ4zOwQ1/I=",
+                                    "1EO63Shm2Vw2258Dafqx2zi81mFi/pcKBbhOBjGeqHU=",
+                                    "BIqHTSbskSiKoeaQYBdkoO1OaA0gzgb6E3aEeQBPVA4=",
+                                    "gpggMAhequnwilqUO8h/KgyRMeySoBemF3JEhYZbjRo=",
+                                    "IWVT/FDnFTGP2+sjD+2Difbw+gdnIgzECgxfAFKPCVo=",
+                                    "PJ9sK5D83BAScOxiAQ3JYI2RiaiPtnnG17O8/SdI6zY=",
+                                    "bGQQ13EkLlnw6Ohu2sbypAu0r2Kmo/TiePqZmT0eKbA=",
+                                    "8xJMVd0C/X0YYvEywcaZ/Bf4PqjlwdpP+jvXtm22vdY=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903959176",
+                                "rootHash": "q7tTWAlSeKOB6dJ6XNJrupEEt4f1jUsUlNHbWlo54jE=",
+                                "treeSize": "2903959216"
+                            },
+                            "integratedTime": "1790805371",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025863438"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16-embed-arm64.zip"
+        },
+        "sha256": "790d097697a2020477549a6764d89d22194c88d6e42caebcb2db63791e004c94"
+    },
+    {
+        "raw": {
+            "description": null,
+            "filesize": 28541864,
+            "md5": null,
+            "sha256": "394ca84150ea428db952cb617c1163c49fbc30e47ec53048c26e6ae44265df07",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "OUyoQVDqQo25UsthfBFjxJ+8MOR+xTBIwm5q5EJl3wc="
+                    },
+                    "signature": "MEUCID3C3YRUSviHtpiOFAwcYTthab+YMq17O9hWIRfhw0wNAiEAloUzeHh8wPVXrZx/UmUeQqE4XupZ0ibu2VtVavmjWA8="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJzCCAq6gAwIBAgIUCAQyutZYy5xkme43nLRiQJU0LKswCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjE2WhcNMjYwOTMwMjIwNjE2WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAWVQ34JWhpsIUtxNj/o3OVNNXkSOYDYaXOdLpMLG3uWDLNbkLDrMVNOyFKhzXmTwV98Kj4F7Ka3c/kOqEmjiFKOCAc0wggHJMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUnGJDkur1RB+Ts6tqHsPGuPwG8XEwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGLBgorBgEEAdZ5AgQCBH0EewB5AHcA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FF/lwAABAMASDBGAiEA3Ja719i3BVjGVbPBhXbolGbAsKEw4A6yihd7bphTd9oCIQDKXwQoOHZVoB04jG92bnV58qoqbk1wLoGu+aLijV3CcTAKBggqhkjOPQQDAwNnADBkAjAUv5PmhzeaAtLs+UqYgKcOuFW69/URfbRvUUSXx8QB7rz52yl6jIQdclPbQLPQepcCMBrEavhgfnzkLPVrHeGCnrWo0JMKE3BIu2JojuQD6ZZMzeft8FTtu0aaD/Ur+fAQZg=="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6TADAgEAMIIE4AYJKoZIhvcNAQcCoIIE0TCCBM0CAQMxDTALBglghkgBZQMEAgEwgcEGCyqGSIb3DQEJEAEEoIGxBIGuMIGrAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgLOQGj3CzW/d+SYr67EfN7Keg9egm/7iU0P4YtQhQPM0CFAXT709rtz4KVhGlAJAEN/wpcqX8GA8yMDI2MDkzMDIxNTYxN1owAwIBAQIIBX+bOICmI1egMqQwMC4xFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEVMBMGA1UEAxMMc2lnc3RvcmUtdHNhoIICFDCCAhAwggGWoAMCAQICFDoTVC8MkGHuvMFDL8uKjosqI4sMMAoGCCqGSM49BAMDMDkxFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEgMB4GA1UEAxMXc2lnc3RvcmUtdHNhLXNlbGZzaWduZWQwHhcNMjUwNDA4MDY1OTQzWhcNMzUwNDA2MDY1OTQzWjAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYTB2MBAGByqGSM49AgEGBSuBBAAiA2IABOK2tmfISjYoNk/ZBYwgE6Bht9I5MvlkL9wcy/pir4dUijUf1MLsLHzQoOLK8qGAHfBOorKL1QNzOGqDXZvUA4udGfJ0xMr6oHwz7UyMFyLX4lvwBX9Ve7sJG5AKI9McXKNqMGgwDgYDVR0PAQH/BAQDAgeAMB0GA1UdDgQWBBSJ/XlDh8/QZUbDAkbHLHNbfbTrAzAfBgNVHSMEGDAWgBSY7AHvf7tR/9SVHm+KiJhTB4nOvzAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDAKBggqhkjOPQQDAwNoADBlAjA7abFf+imjtKshf1DLF9mklFykBXaBk6bUBnNH7atXLLpRzxhunbJsjDXdyQfhtxECMQDmo7wXI6SZim+Db/tk2qI/FHOfm+ooehVwgiq2kqrqXtO86rMDHFyU3tXBMbx775cxggHbMIIB1wIBATBRMDkxFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEgMB4GA1UEAxMXc2lnc3RvcmUtdHNhLXNlbGZzaWduZWQCFDoTVC8MkGHuvMFDL8uKjosqI4sMMAsGCWCGSAFlAwQCAaCB/DAaBgkqhkiG9w0BCQMxDQYLKoZIhvcNAQkQAQQwHAYJKoZIhvcNAQkFMQ8XDTI2MDkzMDIxNTYxN1owLwYJKoZIhvcNAQkEMSIEIDVewkzz649Pzgx5yMu6KKqN7Ca7lDjMP0DmZpHgdbG+MIGOBgsqhkiG9w0BCRACLzF/MH0wezB5BCCF+Se8B6tiysO0Q1bBDvyBssaIP9p6uebYcNnROs0FtzBVMD2kOzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAgRnMGUCMQDHwtu2djHeTGb575X77gWJXopzdWbX0u5PsNVnEYFO/RaYwuzWNoH7HDAaX50HdIMCMGt/3vQQG6WzNo+uxDxEBT7r+VW0yCtd9uTwgfZC5gxhArBjeBjXRl5Y/OEOF69jnQ=="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIzOTRjYTg0MTUwZWE0MjhkYjk1MmNiNjE3YzExNjNjNDlmYmMzMGU0N2VjNTMwNDhjMjZlNmFlNDQyNjVkZjA3In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJRDNDM1lSVVN2aUh0cGlPRkF3Y1lUdGhhYitZTXExN085aFdJUmZodzB3TkFpRUFsb1V6ZUhoOHdQVlhyWngvVW1VZVFxRTRYdXBaMGlidTJWdFZhdm1qV0E4PSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktla05EUVhFMlowRjNTVUpCWjBsVlEwRlJlWFYwV2xsNU5YaHJiV1UwTTI1TVVtbFJTbFV3VEV0emQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBGTWxkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtVeVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZCVjFaUk16UktWMmh3YzBsVmRIaE9haTl2TTA5V1RrNVlhMU5QV1VSWllWaFBaRXdLY0UxTVJ6TjFWMFJNVG1KclRFUnlUVlpPVDNsR1MyaDZXRzFVZDFZNU9FdHFORVkzUzJFell5OXJUM0ZGYldwcFJrdFBRMEZqTUhkblowaEtUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZ1UjBwRUNtdDFjakZTUWl0VWN6WjBjVWh6VUVkMVVIZEhPRmhGZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIweENaMjl5UW1kRlJVRmtXalZCWjFGRFFrZ3dSV1YzUWpWQlNHTkJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1JpOXNkMEZCUWtGTlFWTkVRa2NLUVdsRlFUTktZVGN4T1drelFsWnFSMVppVUVKb1dHSnZiRWRpUVhOTFJYYzBRVFo1YVdoa04ySndhRlJrT1c5RFNWRkVTMWgzVVc5UFNGcFdiMEl3TkFwcVJ6a3lZbTVXTlRoeGIzRmlhekYzVEc5SGRTdGhUR2xxVmpORFkxUkJTMEpuWjNGb2EycFBVRkZSUkVGM1RtNUJSRUpyUVdwQlZYWTFVRzFvZW1WaENrRjBUSE1yVlhGWlowdGpUM1ZHVnpZNUwxVlNabUpTZGxWVlUxaDRPRkZDTjNKNk5USjViRFpxU1ZGa1kyeFFZbEZNVUZGbGNHTkRUVUp5UldGMmFHY0tabTU2YTB4UVZuSklaVWREYm5KWGJ6QktUVXRGTTBKSmRUSktiMnAxVVVRMldscE5lbVZtZERoR1ZIUjFNR0ZoUkM5VmNpdG1RVkZhWnowOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEUCICwSTxGIzZmqayN2c20qyZJ42L+jI51xJOFYv9MPo/JoAiEA8Fn4KlAo4vgBTr6nPfAVl2Lsf1EaHXEcOguGyYcu4Js="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903960082\n0JUS4cuLsu5ImBt45SbkTqnIqBAWz+1BMgvePZlIRkE=\n\n\u2014 rekor.sigstore.dev wNI9ajBEAiAkgvNx4uwPIGUfzSCskXfId4zTrSu9AS4NC5gKFvbI8wIgNl4gU7NGu58bbILa0qw+TQNLWNH3fnuXNzhEypvKXiw=\n"
+                                },
+                                "hashes": [
+                                    "lODeXPVeINrabFs8x0GcRDdCbEZypHmuZL6s+gYccBo=",
+                                    "OPnBy4ujJL39798uIsS6fy9ohdlNWHD0KnIx/x0ZTg4=",
+                                    "9CihrGr7ZYAUERdBe9Xl+o1ldUs619OANfgfeQokNXk=",
+                                    "Kbp3t8KJa90Ts3CqIrKDHKtAxnpcrJ4+c16F+qK6wN0=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903960081",
+                                "rootHash": "0JUS4cuLsu5ImBt45SbkTqnIqBAWz+1BMgvePZlIRkE=",
+                                "treeSize": "2903960082"
+                            },
+                            "integratedTime": "1790805377",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025864343"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16.exe"
+        },
+        "sha256": "394ca84150ea428db952cb617c1163c49fbc30e47ec53048c26e6ae44265df07"
+    },
+    {
+        "raw": {
+            "description": "Recommended",
+            "filesize": 29935584,
+            "md5": null,
+            "sha256": "fb4f9f5d438b2396da0086dc70b935c530cb578e37adc6d354f7ad2037fee83b",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "+0+fXUOLI5baAIbccLk1xTDLV443rcbTVPetIDf+6Ds="
+                    },
+                    "signature": "MEYCIQCTBTu+lkQJuIUYGGjQsFsgMJNg0EgT0SmLGXSIUqcC8wIhAKqmsdESzPaVQm6ketvpv50vhB4O5r/97HOU2+KWWzZr"
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDKDCCAq2gAwIBAgIUT7DU36LublzeGvAtaVAB5qV+TKswCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjA1WhcNMjYwOTMwMjIwNjA1WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEefulphPIo80MHCza9XWbFJu1shH9fFGe70VHOP01IBLiqLx7M2XVEBU5qBHyfzEK8xZJICokILZ501ZrhBymuKOCAcwwggHIMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUqEskGAk4sPBOzmDZWBB+lWkw1KAwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGKBgorBgEEAdZ5AgQCBHwEegB4AHYA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FFTFAAABAMARzBFAiACO+Rpv41TCsn2GgfjdejgGgu4d1rPIuD2mj22G+2n2gIhAM40hMOeZKZvedivTWbbmTHZJclOTl5J171Rauc6TjjLMAoGCCqGSM49BAMDA2kAMGYCMQCn+xiG8GA1j7l3GiFaadCk73CEshUaOqP1lpQSSyt0EpKDpklKNcsZwent+l0xkW4CMQD0czUpWZhudC+LZ4WzyFoeALZPCXnsDaCihCXHQHW/JaDrZKDFNu9yhCMJ/0rHTvI="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6jADAgEAMIIE4QYJKoZIhvcNAQcCoIIE0jCCBM4CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgx42TsFLgd67u2jtGf8TiIflRtcriBitQN+gqLIyESDACFGzljp7zJ1LIbyTaJbmrQ70MtJKoGA8yMDI2MDkzMDIxNTYwNVowAwIBAQIJAMmde4DitEOhoDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB2zCCAdcCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTU2MDVaMC8GCSqGSIb3DQEJBDEiBCAiSOuJua6D/3W3lJkd8XgHTkqvy1ce+9a5PwT++x7DaDCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEZzBlAjEAmac+kWzg8wGu5O9YroRPhu7Q5b3PwYffixrcAlF35qk2dzhIm4TMQbxlVRDyTJT2AjBmVO5jmzmMKyF9My2TZ4Hme5KY0YhAZca6+P2cjxxMXwVXwKdwnbkwKqenBZyzrPk="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJmYjRmOWY1ZDQzOGIyMzk2ZGEwMDg2ZGM3MGI5MzVjNTMwY2I1NzhlMzdhZGM2ZDM1NGY3YWQyMDM3ZmVlODNiIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUNUQlR1K2xrUUp1SVVZR0dqUXNGc2dNSk5nMEVnVDBTbUxHWFNJVXFjQzh3SWhBS3Ftc2RFU3pQYVZRbTZrZXR2cHY1MHZoQjRPNXIvOTdIT1UyK0tXV3paciIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUkxSRU5EUVhFeVowRjNTVUpCWjBsVlZEZEVWVE0yVEhWaWJIcGxSM1pCZEdGV1FVSTFjVllyVkV0emQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBCTVZkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtFeFYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZsWm5Wc2NHaFFTVzg0TUUxSVEzcGhPVmhYWWtaS2RURnphRWc1WmtaSFpUY3dWa2dLVDFBd01VbENUR2x4VEhnM1RUSllWa1ZDVlRWeFFraDVabnBGU3poNFdrcEpRMjlyU1V4YU5UQXhXbkpvUW5sdGRVdFBRMEZqZDNkblowaEpUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZ4UlhOckNrZEJhelJ6VUVKUGVtMUVXbGRDUWl0c1YydDNNVXRCZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwdENaMjl5UW1kRlJVRmtXalZCWjFGRFFraDNSV1ZuUWpSQlNGbEJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1JsUkdRVUZCUWtGTlFWSjZRa1lLUVdsQlEwOHJVbkIyTkRGVVEzTnVNa2RuWm1wa1pXcG5SMmQxTkdReGNsQkpkVVF5YldveU1rY3JNbTR5WjBsb1FVMDBNR2hOVDJWYVMxcDJaV1JwZGdwVVYySmliVlJJV2twamJFOVViRFZLTVRjeFVtRjFZelpVYW1wTVRVRnZSME5EY1VkVFRUUTVRa0ZOUkVFeWEwRk5SMWxEVFZGRGJpdDRhVWM0UjBFeENtbzNiRE5IYVVaaFlXUkRhemN6UTBWemFGVmhUM0ZRTVd4d1VWTlRlWFF3UlhCTFJIQnJiRXRPWTNOYWQyVnVkQ3RzTUhoclZ6UkRUVkZFTUdONlZYQUtWMXBvZFdSREsweGFORmQ2ZVVadlpVRk1XbEJEV0c1elJHRkRhV2hEV0VoUlNGY3ZTbUZFY2xwTFJFWk9kVGw1YUVOTlNpOHdja2hVZGtrOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEUCIQCuyakh+yAorlJwg604ks09A7pBuSoITi+YlMaSubaajAIgDwKqR2LPiHeu6u7h90Nm+LAWZdN+qwXJbMvYm7Zw1wc="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903958147\nSs5BZF+HY6qUvCEzW0gGMwPsoWrqiSJZNTggFjvRQn8=\n\n\u2014 rekor.sigstore.dev wNI9ajBGAiEAyzBAoEQi//QiC/aBRg8OU14miXjVJJTtJEO2pofPB24CIQDXraGcT3duNK5t0wYple55EYnXMfq516OhweZuZ8A9oQ==\n"
+                                },
+                                "hashes": [
+                                    "jbjEpqwui8lSYIM0cH/ftjuvzdHtjE6S9rZymYyOkbg=",
+                                    "zJJKsar6ppGUcU6+OJEcMT0vtGli8AW8W8H1Y7xrynU=",
+                                    "KCG5MukK5zEVqpH5Yu18wR4KLSTLBS5h91cheZAdlAU=",
+                                    "b4UPw532QikpBCSnb19i05MbikUzv/YP3OtyvkPClj4=",
+                                    "MAiXEl7e38qkhWM/D9Qn6MVVNvDGqcmdy9hIVaetnAI=",
+                                    "q8r0T8+AGYOtbIGzHNAjKwe3fK0OYfPZOHPLwDs//bY=",
+                                    "6CIBUFGOQb0XzrKUkxc5tN6NR4NOzTjAX5cMnluCOYQ=",
+                                    "S4PCV6h/r/SaLYfLuitvZv9UShiOj1zrG2gczCZhz7k=",
+                                    "qnacLEm8X0H9mbbaXTkPWdlAbMeO7OB2W+hbxiwCJr0=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903958110",
+                                "rootHash": "Ss5BZF+HY6qUvCEzW0gGMwPsoWrqiSJZNTggFjvRQn8=",
+                                "treeSize": "2903958147"
+                            },
+                            "integratedTime": "1790805366",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025862372"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16-amd64.exe"
+        },
+        "sha256": "fb4f9f5d438b2396da0086dc70b935c530cb578e37adc6d354f7ad2037fee83b"
+    },
+    {
+        "raw": {
+            "description": "Experimental",
+            "filesize": 29244816,
+            "md5": null,
+            "sha256": "696e2226062c6ec3622c13f143d28336a856968518e49cb4f4c62513215a4f5d",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "aW4iJgYsbsNiLBPxQ9KDNqhWloUY5Jy09MYlEyFaT10="
+                    },
+                    "signature": "MEUCIAL910udykufs3SvnstVlhyAK8ymu+YmB3AJiZxnTj3GAiEA2vrRM2CqTOJzK9FyzKZyA+XVYPqjG1UUSXaP/d/Jfmo="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJzCCAq2gAwIBAgIUOsiLCqplZISYEpPkbHwn2qv0geIwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjA3WhcNMjYwOTMwMjIwNjA3WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFbkRBSDI9sVICh1HKmrAb/38nK20rQrCbbuGJJW8073XZl/avLpt632W2HAluLbfhwGbT3ghwkM3zAT5GJ47AKOCAcwwggHIMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUfj0ENMaZAJsu9br7Yz4VPKkIY5gwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGKBgorBgEEAdZ5AgQCBHwEegB4AHYA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FFamgAABAMARzBFAiEAs6tgWtaVABbtLil3Zr/gO0JPUjfyr5r7z/C+5KEzms4CIHbqaRYJGmoOEC8CLadLO7+s0CPa1l4NFgVrBPZyxprBMAoGCCqGSM49BAMDA2gAMGUCMGKtSzjt/E36pUZazMTWutOTkVN46fcgwnynStnUMlBTGGDAI/XMgWfJCnpN1jWVAAIxAOg5+rs6K+zL9qyktN//EBf2YryAPvLm3wFWyQD53YOfQaTswRIYAfUuLdJwNY2wLA=="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6zADAgEAMIIE4gYJKoZIhvcNAQcCoIIE0zCCBM8CAQMxDTALBglghkgBZQMEAgEwgcMGCyqGSIb3DQEJEAEEoIGzBIGwMIGtAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgc+MvF61o3UMI8nyB+V7aBcZeSapanxnw3qTgZyPcDu0CFQDeBIaqJe2Hdn1Ma2fN2dI9tdoizBgPMjAyNjA5MzAyMTU2MDdaMAMCAQECCQCT9yDE7NjBLaAypDAwLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2GgggIUMIICEDCCAZagAwIBAgIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwMwOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZDAeFw0yNTA0MDgwNjU5NDNaFw0zNTA0MDYwNjU5NDNaMC4xFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEVMBMGA1UEAxMMc2lnc3RvcmUtdHNhMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE4ra2Z8hKNig2T9kFjCAToGG30jky+WQv3BzL+mKvh1SKNR/UwuwsfNCg4sryoYAd8E6isovVA3M4aoNdm9QDi50Z8nTEyvqgfDPtTIwXItfiW/AFf1V7uwkbkAoj0xxco2owaDAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0OBBYEFIn9eUOHz9BlRsMCRscsc1t9tOsDMB8GA1UdIwQYMBaAFJjsAe9/u1H/1JUeb4qImFMHic6/MBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMAoGCCqGSM49BAMDA2gAMGUCMDtpsV/6KaO0qyF/UMsX2aSUXKQFdoGTptQGc0ftq1csulHPGG6dsmyMNd3JB+G3EQIxAOajvBcjpJmKb4Nv+2Taoj8Uc5+b6ih6FXCCKraSqupe07zqswMcXJTe1cExvHvvlzGCAdswggHXAgEBMFEwOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCwYJYIZIAWUDBAIBoIH8MBoGCSqGSIb3DQEJAzENBgsqhkiG9w0BCRABBDAcBgkqhkiG9w0BCQUxDxcNMjYwOTMwMjE1NjA3WjAvBgkqhkiG9w0BCQQxIgQgSb7G0nCiLJeBAj7c3ysV5Xl5BhKKw5eUJy7R6qO2g2MwgY4GCyqGSIb3DQEJEAIvMX8wfTB7MHkEIIX5J7wHq2LKw7RDVsEO/IGyxog/2nq55thw2dE6zQW3MFUwPaQ7MDkxFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEgMB4GA1UEAxMXc2lnc3RvcmUtdHNhLXNlbGZzaWduZWQCFDoTVC8MkGHuvMFDL8uKjosqI4sMMAoGCCqGSM49BAMCBGcwZQIwY+VDz/3rYqaZ9+cSX3IDU9rdkf2DBCZEjU0t/2xrXqGFJVbJf/ocrpRcIx+yW+N2AjEAo2wJGE4yJ9jNbg7XyeIeLz+7R337sD+M3HJ7MGPVI6WUOXYLpQpdeSv+MPHpBPlK"
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiI2OTZlMjIyNjA2MmM2ZWMzNjIyYzEzZjE0M2QyODMzNmE4NTY5Njg1MThlNDljYjRmNGM2MjUxMzIxNWE0ZjVkIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJQUw5MTB1ZHlrdWZzM1N2bnN0VmxoeUFLOHltdStZbUIzQUppWnhuVGozR0FpRUEydnJSTTJDcVRPSnpLOUZ5ektaeUErWFZZUHFqRzFVVVNYYVAvZC9KZm1vPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktla05EUVhFeVowRjNTVUpCWjBsVlQzTnBURU54Y0d4YVNWTlpSWEJRYTJKSWQyNHljWFl3WjJWSmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBCTTFkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtFelYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZHWW10U1FsTkVTVGx6VmtsRGFERklTMjF5UVdJdk16aHVTekl3Y2xGeVEySmlkVWNLU2twWE9EQTNNMWhhYkM5aGRreHdkRFl6TWxjeVNFRnNkVXhpWm1oM1IySlVNMmRvZDJ0Tk0zcEJWRFZIU2pRM1FVdFBRMEZqZDNkblowaEpUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZtYWpCRkNrNU5ZVnBCU25OMU9XSnlOMWw2TkZaUVMydEpXVFZuZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwdENaMjl5UW1kRlJVRmtXalZCWjFGRFFraDNSV1ZuUWpSQlNGbEJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1JtRnRaMEZCUWtGTlFWSjZRa1lLUVdsRlFYTTJkR2RYZEdGV1FVSmlkRXhwYkROYWNpOW5UekJLVUZWcVpubHlOWEkzZWk5REt6VkxSWHB0Y3pSRFNVaGljV0ZTV1VwSGJXOVBSVU00UXdwTVlXUk1UemNyY3pCRFVHRXhiRFJPUm1kV2NrSlFXbmw0Y0hKQ1RVRnZSME5EY1VkVFRUUTVRa0ZOUkVFeVowRk5SMVZEVFVkTGRGTjZhblF2UlRNMkNuQlZXbUY2VFZSWGRYUlBWR3RXVGpRMlptTm5kMjU1YmxOMGJsVk5iRUpVUjBkRVFVa3ZXRTFuVjJaS1EyNXdUakZxVjFaQlFVbDRRVTluTlN0eWN6WUtTeXQ2VERseGVXdDBUaTh2UlVKbU1sbHllVUZRZGt4dE0zZEdWM2xSUkRVeldVOW1VV0ZVYzNkU1NWbEJabFYxVEdSS2QwNVpNbmRNUVQwOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEQCIC1kr6IPAfPzrPS6V/lNlCbWED4PhdLVhGg+0qtekLcHAiAgmzVSoyn2hZ4w5iGf5Nvw+RM0OsS1xjXbMm4Th9U3Mg=="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903958521\nRy4bEkwDMeOxBiXwTpNR7LyQL1y/4f56IBryUjf8Bqk=\n\n\u2014 rekor.sigstore.dev wNI9ajBFAiEA9/ZQNqUyRT8NX0QuKlkjFsk9cLdIevb7hFP96evIMZwCIDf4sJspBswlykWCNcnN2/8g9k3K04gdQdjpDD6wQnt4\n"
+                                },
+                                "hashes": [
+                                    "HpTKqdy+0HZuRC++XtDLj0X93fxfy8ZbLm9IDv6tmjA=",
+                                    "NvQXluN+Jlcr1e99D3Cc33hUGoYQt5KUgNFM8pRIiwE=",
+                                    "LKKQwE2LeM/CZPfdx8QLXec40lfYlRFlpNG5EsfeQco=",
+                                    "7QnN3ARr1PYhwvykp7UTQDMOlui1QhWC0gKMDoUGPIY=",
+                                    "IKxT+X06PzcPU93dCN0MqXv/Ey8Jo6XSpzkmnHy6guU=",
+                                    "hfitKKlipUr/wcF2dR6lsxcQ2KuW6GCvefpjg1Zclao=",
+                                    "LBKc7tq2isDSswAzETQhO2MqwKNfVtSMZpW8XHpgdPM=",
+                                    "q99mFCalNx3UYbtm9K8LH0IgK8M8tUAO9AVHc/dhhlU=",
+                                    "MYWiFBEUbrysdC+6S5g5GahVkuSffV+aFjg6KHrVmu4=",
+                                    "qnacLEm8X0H9mbbaXTkPWdlAbMeO7OB2W+hbxiwCJr0=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903958477",
+                                "rootHash": "Ry4bEkwDMeOxBiXwTpNR7LyQL1y/4f56IBryUjf8Bqk=",
+                                "treeSize": "2903958521"
+                            },
+                            "integratedTime": "1790805368",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025862739"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16-arm64.exe"
+        },
+        "sha256": "696e2226062c6ec3622c13f143d28336a856968518e49cb4f4c62513215a4f5d"
+    },
+    {
+        "raw": {
+            "description": "Install with 'py install 3.13'",
+            "filesize": 14967,
+            "md5": null,
+            "sha256": "e95d3e68177b2c459f3b6415245dae02357018d9b0c8de85fd0c877996688c09",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "6V0+aBd7LEWfO2QVJF2uAjVwGNmwyN6F/QyHeZZojAk="
+                    },
+                    "signature": "MEYCIQD1toJl1SOk+BD0GQFwFBofDKVzlGHsDx3MusoqDc1+9wIhAIVC+BSVHcCJnpYtwIqYUV+hPPd4rxvYSa6YNPJtJ4k1"
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDKDCCAq2gAwIBAgIUcYk9KBAR8P0XEpP0yJFRw3oKWCUwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjE4WhcNMjYwOTMwMjIwNjE4WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAAuz0/NGtg0pxi/Gvi6zQXeJ3WdRiw3EoqdGKC//VWoQf4FqUyX0x6CU9GMrK5clzqFc6OlgNUY520ELUWhmU6OCAcwwggHIMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUoBLiCSxyJ4xgHUtR0w44bDMaFcQwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGKBgorBgEEAdZ5AgQCBHwEegB4AHYA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FGF1AAABAMARzBFAiEAwmoLWcUGgwYMBDwVuFHO9V1fzFrZX1QHI8BKStKKJ0UCICLVeqJ9USp3VguvpM3Nms1CWC+5kp3YRYFyogGCCPhaMAoGCCqGSM49BAMDA2kAMGYCMQDNnagfhnTOxcTE7NgeOQt+t1lPOUBpDLiEXE+dv+8Zt673NWntRi6lq1Kl6YdN8aQCMQDtdc/dk9nt/mwHgYQX+EeCbt/vGtbC8yvw/FRSEvs2QGCOzBFCAiQ3pH68rJOgyhQ="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6TADAgEAMIIE4AYJKoZIhvcNAQcCoIIE0TCCBM0CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgZ2bv0MEFw+89R3rt3TJV/7fS24eKQNVFXd4+JfMAugICFQCtGQFRWxF88A24MOVXoic3JF9/NxgPMjAyNjA5MzAyMTU2MThaMAMCAQECCBF56bwmvOQqoDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB2jCCAdYCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTU2MThaMC8GCSqGSIb3DQEJBDEiBCDX3yfGBpYMncHeX95kYEUrh/oXJeldN3VxQPCFsiaTATCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEZjBkAjBEMxhgBSn61v9BDfxeW7Q2JjMNxYCVOLBpWlvuhZIW4txgRtWWdq+Qs8dbmzV85jkCMHyU+KK415BvcyCGtSAFiG5sy5bTxFbN4C0AJRznIYxJVqYj7PAgbYUUpNC/+U5Nfw=="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJlOTVkM2U2ODE3N2IyYzQ1OWYzYjY0MTUyNDVkYWUwMjM1NzAxOGQ5YjBjOGRlODVmZDBjODc3OTk2Njg4YzA5In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUQxdG9KbDFTT2srQkQwR1FGd0ZCb2ZES1Z6bEdIc0R4M011c29xRGMxKzl3SWhBSVZDK0JTVkhjQ0pucFl0d0lxWVVWK2hQUGQ0cnh2WVNhNllOUEp0SjRrMSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUkxSRU5EUVhFeVowRjNTVUpCWjBsVlkxbHJPVXRDUVZJNFVEQllSWEJRTUhsS1JsSjNNMjlMVjBOVmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBGTkZkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtVMFYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZCUVhWNk1DOU9SM1JuTUhCNGFTOUhkbWsyZWxGWVpVb3pWMlJTYVhjelJXOXhaRWNLUzBNdkwxWlhiMUZtTkVaeFZYbFlNSGcyUTFVNVIwMXlTelZqYkhweFJtTTJUMnhuVGxWWk5USXdSVXhWVjJodFZUWlBRMEZqZDNkblowaEpUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZ2UWt4cENrTlRlSGxLTkhoblNGVjBVakIzTkRSaVJFMWhSbU5SZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwdENaMjl5UW1kRlJVRmtXalZCWjFGRFFraDNSV1ZuUWpSQlNGbEJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1IwWXhRVUZCUWtGTlFWSjZRa1lLUVdsRlFYZHRiMHhYWTFWSFozZFpUVUpFZDFaMVJraFBPVll4Wm5wR2NscFlNVkZJU1RoQ1MxTjBTMHRLTUZWRFNVTk1WbVZ4U2psVlUzQXpWbWQxZGdwd1RUTk9iWE14UTFkREt6VnJjRE5aVWxsR2VXOW5SME5EVUdoaFRVRnZSME5EY1VkVFRUUTVRa0ZOUkVFeWEwRk5SMWxEVFZGRVRtNWhaMlpvYmxSUENuaGpWRVUzVG1kbFQxRjBLM1F4YkZCUFZVSndSRXhwUlZoRksyUjJLemhhZERZM00wNVhiblJTYVRac2NURkxiRFpaWkU0NFlWRkRUVkZFZEdSakwyUUthemx1ZEM5dGQwaG5XVkZZSzBWbFEySjBMM1pIZEdKRE9IbDJkeTlHVWxORmRuTXlVVWREVDNwQ1JrTkJhVkV6Y0VnMk9ISktUMmQ1YUZFOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEQCICZGcoD+W199Ey0kVvQEgOdkXm0NXNsLdIUcKX3435KDAiBGZrpd0PjIVE8ca0lrpMWlfUCqy23lACqJ1WQBxbPbSQ=="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903960405\nLPjzG9nbhdyFIfcz1tcIDDt09aIAIikW5JJwkF0Nvso=\n\n\u2014 rekor.sigstore.dev wNI9ajBGAiEAjOV/nwkXieU8wZELwbI2f4UjTuX7e6JrOvJyOpkxMM4CIQC/p8NQOJs+bbIfNoZpbnNjhsSY2ZWWPDdfGuN/PPHgQA==\n"
+                                },
+                                "hashes": [
+                                    "uojIq6GgNzJbB8fkcRbT1wMxa2Iw940OdxdFE/FS7js=",
+                                    "5oI/wbu1tXWo8iwITRlXX+cdRfQmVswfyMze7N6/SdA=",
+                                    "2TeluqODaYmFSu4yF0UIbzyPSjMnitkdmxVWWfkkN7o=",
+                                    "8tE5b/IJOsXEAdhhPCe/iDfsgczcXEcA8OFnzlRiyrQ=",
+                                    "7QoVlEHi2kj350bVhBJo3uEwX7xf2azE/3RHYrhCM0E=",
+                                    "hi3Z7aq7VosuiH3dI2/Ka0uIgl6RUSE3UdFRKgWLcak=",
+                                    "vpJ5sNbb4oTv6rcGDZIo5nqGBSTGuDJszYwn9zH1xog=",
+                                    "LrTC3Jt70GefS7VAq7PLhyeGA3MOEBYPHbqLErHLwWQ=",
+                                    "9CihrGr7ZYAUERdBe9Xl+o1ldUs619OANfgfeQokNXk=",
+                                    "Kbp3t8KJa90Ts3CqIrKDHKtAxnpcrJ4+c16F+qK6wN0=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903960347",
+                                "rootHash": "LPjzG9nbhdyFIfcz1tcIDDt09aIAIikW5JJwkF0Nvso=",
+                                "treeSize": "2903960405"
+                            },
+                            "integratedTime": "1790805378",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025864609"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/windows-3.13.16.json"
+        },
+        "sha256": "e95d3e68177b2c459f3b6415245dae02357018d9b0c8de85fd0c877996688c09"
+    },
+    {
+        "raw": {
+            "description": "for macOS 10.13 and later",
+            "filesize": 70394335,
+            "md5": null,
+            "sha256": "30666509020b4da0dd8bc2e773255f34d76b7bb80b66960a928d5f6daa0192d7",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "MGZlCQILTaDdi8LncyVfNNdre7gLZpYKko1fbaoBktc="
+                    },
+                    "signature": "MEYCIQDRVfQAOioVjAelJ+aG0dwRe78jLJ5cA8GRLZql15yOaAIhAMBNUQzghj1sdZb8Rke2JoccBAXiXpEXuImHt5xjvFg+"
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJjCCAqygAwIBAgIUDk5QtC+6+KzosdvEsuJUKXpLp/0wCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjE1NjE0WhcNMjYwOTMwMjIwNjE0WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUIT3JarcFRzRbPALlHXRbJftAAqIp87Sz0waPObM8+HQuDJUaOQi4S1XZRmACBGWiATGUiInvSmcHtQ87gmuxKOCAcswggHHMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUOaJSe4aHkqhKoDS+wzNH948sVO4wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGJBgorBgEEAdZ5AgQCBHsEeQB3AHUA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9FF3dQAABAMARjBEAiAbyRbsJKmjChOigbPDBoOLNyjAD5cHyYdHe5FfO4PvogIgZp3VdqJBZvFpU1IX7vPXNgEw5HUXC7dbKyaWwtE5c2wwCgYIKoZIzj0EAwMDaAAwZQIwEQUVTRu0n/n3x9a3B3yRDBp5rHPcnDBJZ/g6avm3RjHZJoUd/QgdJeYy2kp+h/BNAjEAm6DOkoxLXaMI0hrG3AZDHKWS7qR0hEZjwq3bFYhfHLNlqtPIo7QKb77lThenfs+U"
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE7DADAgEAMIIE4wYJKoZIhvcNAQcCoIIE1DCCBNACAQMxDTALBglghkgBZQMEAgEwgcMGCyqGSIb3DQEJEAEEoIGzBIGwMIGtAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgtzladBsFztKkpIIS6+VdZNRwA9u7RATKM5b7R/7lC8gCFQCpmz08KU3c88FOk+mGGiCpdZOQExgPMjAyNjA5MzAyMTU2MTVaMAMCAQECCQD0QQSC6FGix6AypDAwLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2GgggIUMIICEDCCAZagAwIBAgIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwMwOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZDAeFw0yNTA0MDgwNjU5NDNaFw0zNTA0MDYwNjU5NDNaMC4xFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEVMBMGA1UEAxMMc2lnc3RvcmUtdHNhMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE4ra2Z8hKNig2T9kFjCAToGG30jky+WQv3BzL+mKvh1SKNR/UwuwsfNCg4sryoYAd8E6isovVA3M4aoNdm9QDi50Z8nTEyvqgfDPtTIwXItfiW/AFf1V7uwkbkAoj0xxco2owaDAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0OBBYEFIn9eUOHz9BlRsMCRscsc1t9tOsDMB8GA1UdIwQYMBaAFJjsAe9/u1H/1JUeb4qImFMHic6/MBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMAoGCCqGSM49BAMDA2gAMGUCMDtpsV/6KaO0qyF/UMsX2aSUXKQFdoGTptQGc0ftq1csulHPGG6dsmyMNd3JB+G3EQIxAOajvBcjpJmKb4Nv+2Taoj8Uc5+b6ih6FXCCKraSqupe07zqswMcXJTe1cExvHvvlzGCAdwwggHYAgEBMFEwOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCwYJYIZIAWUDBAIBoIH8MBoGCSqGSIb3DQEJAzENBgsqhkiG9w0BCRABBDAcBgkqhkiG9w0BCQUxDxcNMjYwOTMwMjE1NjE1WjAvBgkqhkiG9w0BCQQxIgQg/2BVk8gPw0GXWVvKxWJFwDX+1yofu/b7Fuoq92WKTegwgY4GCyqGSIb3DQEJEAIvMX8wfTB7MHkEIIX5J7wHq2LKw7RDVsEO/IGyxog/2nq55thw2dE6zQW3MFUwPaQ7MDkxFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEgMB4GA1UEAxMXc2lnc3RvcmUtdHNhLXNlbGZzaWduZWQCFDoTVC8MkGHuvMFDL8uKjosqI4sMMAoGCCqGSM49BAMCBGgwZgIxAM9Vb3I4/tD3cRBhGbwFvpA5DICtfyNmIWMw5yJ/ur4CZWMlzWY0tWVNs3IEUZLX4gIxAJmGAB1bNQASoOrHd0V1OGp+ibqvSC05mS/iqF2l9isX9F0O5VYD/snX9/T1c569fA=="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIzMDY2NjUwOTAyMGI0ZGEwZGQ4YmMyZTc3MzI1NWYzNGQ3NmI3YmI4MGI2Njk2MGE5MjhkNWY2ZGFhMDE5MmQ3In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUURSVmZRQU9pb1ZqQWVsSithRzBkd1JlNzhqTEo1Y0E4R1JMWnFsMTV5T2FBSWhBTUJOVVF6Z2hqMXNkWmI4UmtlMkpvY2NCQVhpWHBFWHVJbUh0NXhqdkZnKyIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktha05EUVhGNVowRjNTVUpCWjBsVlJHczFVWFJES3pZclMzcHZjMlIyUlhOMVNsVkxXSEJNY0M4d2QwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVXhUbXBGTUZkb1kwNU5hbGwzVDFSTmQwMXFTWGRPYWtVd1YycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZWU1ZRelNtRnlZMFpTZWxKaVVFRk1iRWhZVW1KS1puUkJRWEZKY0RnM1Uzb3dkMkVLVUU5aVRUZ3JTRkYxUkVwVllVOVJhVFJUTVZoYVVtMUJRMEpIVjJsQlZFZFZhVWx1ZGxOdFkwaDBVVGczWjIxMWVFdFBRMEZqYzNkblowaElUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZQWVVwVENtVTBZVWhyY1doTGIwUlRLM2Q2VGtnNU5EaHpWazgwZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwcENaMjl5UW1kRlJVRmtXalZCWjFGRFFraHpSV1ZSUWpOQlNGVkJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsR1JqTmtVVUZCUWtGTlFWSnFRa1VLUVdsQllubFNZbk5LUzIxcVEyaFBhV2RpVUVSQ2IwOU1UbmxxUVVRMVkwaDVXV1JJWlRWR1prODBVSFp2WjBsblduQXpWbVJ4U2tKYWRrWndWVEZKV0FvM2RsQllUbWRGZHpWSVZWaEROMlJpUzNsaFYzZDBSVFZqTW5kM1EyZFpTVXR2V2tsNmFqQkZRWGROUkdGQlFYZGFVVWwzUlZGVlZsUlNkVEJ1TDI0ekNuZzVZVE5DTTNsU1JFSndOWEpJVUdOdVJFSktXaTluTm1GMmJUTlNha2hhU205VlpDOVJaMlJLWlZsNU1tdHdLMmd2UWs1QmFrVkJiVFpFVDJ0dmVFd0tXR0ZOU1RCb2NrY3pRVnBFU0V0WFV6ZHhVakJvUlZwcWQzRXpZa1paYUdaSVRFNXNjWFJRU1c4M1VVdGlOemRzVkdobGJtWnpLMVVLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0=",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEQCIDUIM6dWwgk+7VyV4GgY4uHRJGG2h4A/NgKq1bNGHqOmAiBzR+BNPljFgQ+/7URiT1eJ8jpNn1Rf4EFyMIu/SvHe9A=="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903959842\nOjd5nnpORfVLKJatmU1Kqcy4lC+qMPCH/lsmNXFun6w=\n\n\u2014 rekor.sigstore.dev wNI9ajBFAiBN1CSUyYv5eBiE2YV16vhAt4Ienwa9LDLRgOjvgEtejgIhALfvWZ/uihxuuzDr/NXsy0nA6+NQX+vyTpJ/9hNzMW/Z\n"
+                                },
+                                "hashes": [
+                                    "pH7q2NTP2weqtf3oiUUd4RUDfOZnEvgQHEBFYQtQAKw=",
+                                    "4CbrXT0kkXtdbJRig+Ew6Gt5SwH7Vvkc0unieiP7NaQ=",
+                                    "LHrMe4HzWv7JOmU4zNfdnfCHji8aYE/mGEMRmyntSws=",
+                                    "dXaDWvLHQxsWJFKHlPQkgOhLJtwRoHMRVqaPSq9DXnk=",
+                                    "MjJ+5jVPN728c95ZtgmIwtZ4Cgtkxz3j0sDV5R+m0R4=",
+                                    "S5szjpXEZRbtiQbK2St8oflQR48c/i05Yw0oery5R8c=",
+                                    "z/xuxpi7TpwI7mW6a20J9BQ96XpL4rsT/Es6LBRO7zM=",
+                                    "Kbp3t8KJa90Ts3CqIrKDHKtAxnpcrJ4+c16F+qK6wN0=",
+                                    "7pQ/w6R25BiMh4W+uMTgyrVxypj+l+dSD9XU2/Ycjtc=",
+                                    "YLiuzefMmfDpAqc8NFFk708NGY3NSmJ2+mfnmLqBGJg=",
+                                    "+X2qpOliDdxlLu2F6FB314nmixs0v+4VCgBB1DJUuYU=",
+                                    "hzVl+dY70m7uUakYKZvBmEMHKzURtsMNsueYCV9i1VY=",
+                                    "3ey5Nk9xqoNfxRQvXEjDofsszFME/gHHhBfRcqi2jHo=",
+                                    "q/pQ6S7fW7v/MxJNKfeQEMe8YsVBYpZ0/cZuDXVb3Zk=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903959821",
+                                "rootHash": "Ojd5nnpORfVLKJatmU1Kqcy4lC+qMPCH/lsmNXFun6w=",
+                                "treeSize": "2903959842"
+                            },
+                            "integratedTime": "1790805375",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025864083"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/python-3.13.16-macos11.pkg"
+        },
+        "sha256": "30666509020b4da0dd8bc2e773255f34d76b7bb80b66960a928d5f6daa0192d7"
+    },
+    {
+        "raw": {
+            "description": null,
+            "filesize": 30191781,
+            "md5": null,
+            "sha256": "cfac63bddf956deafb1172ca131ae5dcaafd6f95056086e233fca205593ed427",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "z6xjvd+Vber7EXLKExrl3Kr9b5UFYIbiM/yiBVk+1Cc="
+                    },
+                    "signature": "MEQCIG1hg4lEkSln64mJf0Kpqmolnz3Ob+ZKJP4VUirLozxoAiAibPSrN9nZKO8qv8WUmtEScOEOqLCh033BpEbgodQm7Q=="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJzCCAq2gAwIBAgITFyubRJWTidAL0fd4AYtm1OAMhDAKBggqhkjOPQQDAzA3MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxHjAcBgNVBAMTFXNpZ3N0b3JlLWludGVybWVkaWF0ZTAeFw0yNjA5MzAyMTAxNTBaFw0yNjA5MzAyMTExNTBaMAAwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASqsUzzjTY7h8Yd1bWcQxMx3KiM7Vq0+PfIsMlWtY8xnGYKk+OYtFpmB6O6WXKTAlI3n5dz7TA4xRIb/dpyg2pZo4IBzTCCAckwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMDMB0GA1UdDgQWBBSNuNyTniXoAJ90wNbxKXaM6LlqWzAfBgNVHSMEGDAWgBTf0+nPViQRlvmo2OkoVaLGLhhkPzAfBgNVHREBAf8EFTATgRF0aG9tYXNAcHl0aG9uLm9yZzApBgorBgEEAYO/MAEBBBtodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20wKwYKKwYBBAGDvzABCAQdDBtodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20wWwYKKwYBBAGDvzABGARNDEtDaFV4TVRNd01ESTNNall6TVRVek56STBPRGM1TURVU0gyaDBkSEJ6T2lVeVJpVXlSbUZqWTI5MWJuUnpMbWR2YjJkc1pTNWpiMjAwgYsGCisGAQQB1nkCBAIEfQR7AHkAdwDdPTBqxscRMmMZHhyZZzcCokpeuN48rf+HinKALynujgAAAaD0H6acAAAEAwBIMEYCIQCcH5gwzyzcK+6CIVEYyh/gOPuNtG+bf2KQWw3bl4wPLwIhANiNXIMO+AsBUrwJnGiLlZsnaYPST/Dkisb1S62x8l8LMAoGCCqGSM49BAMDA2gAMGUCMEjnwCgrrOFZqqeP7RXtW3NmEapJBIPOHwAqEoHjYCZuDzvyz9kV6QcSuA2FnxWgugIxAILQ63d8fGK+wytRlHgCQKWo/F/ZdT1/bwFcZ5SRIQdvIo45DZ27QGnV4E1sl57Kvw=="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6zADAgEAMIIE4gYJKoZIhvcNAQcCoIIE0zCCBM8CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgPyDwPjY7KaVdkvffZugGSJIu5JX5ljzIbuMftrFrO10CFFtYgoWpOg59jxEpZKUl642fiTvEGA8yMDI2MDkzMDIxMDE1MFowAwIBAQIJALqptGWps39ToDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB3DCCAdgCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTAxNTBaMC8GCSqGSIb3DQEJBDEiBCDf80x4RatJDHU4kIHiEK7UFpQTb2/Bv1yyunVGa6gSnDCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEaDBmAjEA9nCurl+U4gqdQnBo6w247RmQBX+kZNNITaWvswWylqDjtmm5cHJ5WVtKY76KGg8nAjEA1Pu+eu/DnIVShDwirQleRn71RXx+uzDswJj8rXTlx2s7oCtphPPOYs5hBXXZ/8nT"
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJjZmFjNjNiZGRmOTU2ZGVhZmIxMTcyY2ExMzFhZTVkY2FhZmQ2Zjk1MDU2MDg2ZTIzM2ZjYTIwNTU5M2VkNDI3In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FUUNJRzFoZzRsRWtTbG42NG1KZjBLcHFtb2xuejNPYitaS0pQNFZVaXJMb3p4b0FpQWliUFNyTjluWktPOHF2OFdVbXRFU2NPRU9xTENoMDMzQnBFYmdvZFFtN1E9PSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktla05EUVhFeVowRjNTVUpCWjBsVVJubDFZbEpLVjFScFpFRk1NR1prTkVGWmRHMHhUMEZOYUVSQlMwSm5aM0ZvYTJwUFVGRlJSRUY2UVRNS1RWSlZkMFYzV1VSV1VWRkxSWGQ0ZW1GWFpIcGtSemw1V2xNMWExcFlXWGhJYWtGalFtZE9Wa0pCVFZSR1dFNXdXak5PTUdJelNteE1WMngxWkVkV2VRcGlWMVpyWVZkR01GcFVRV1ZHZHpCNVRtcEJOVTE2UVhsTlZFRjRUbFJDWVVaM01IbE9ha0UxVFhwQmVVMVVSWGhPVkVKaFRVRkJkMWRVUVZSQ1oyTnhDbWhyYWs5UVVVbENRbWRuY1docmFrOVFVVTFDUW5kT1EwRkJVM0Z6VlhwNmFsUlpOMmc0V1dReFlsZGpVWGhOZUROTGFVMDNWbkV3SzFCbVNYTk5iRmNLZEZrNGVHNUhXVXRySzA5WmRFWndiVUkyVHpaWFdFdFVRV3hKTTI0MVpIbzNWRUUwZUZKSllpOWtjSGxuTW5CYWJ6UkpRbnBVUTBOQlkydDNSR2RaUkFwV1VqQlFRVkZJTDBKQlVVUkJaMlZCVFVKTlIwRXhWV1JLVVZGTlRVRnZSME5EYzBkQlVWVkdRbmROUkUxQ01FZEJNVlZrUkdkUlYwSkNVMDUxVG5sVUNtNXBXRzlCU2prd2QwNWllRXRZWVUwMlRHeHhWM3BCWmtKblRsWklVMDFGUjBSQlYyZENWR1l3SzI1UVZtbFJVbXgyYlc4eVQydHZWbUZNUjB4b2FHc0tVSHBCWmtKblRsWklVa1ZDUVdZNFJVWlVRVlJuVWtZd1lVYzVkRmxZVGtGalNHd3dZVWM1ZFV4dE9YbGFla0Z3UW1kdmNrSm5SVVZCV1U4dlRVRkZRZ3BDUW5SdlpFaFNkMk42YjNaTU1rWnFXVEk1TVdKdVVucE1iV1IyWWpKa2MxcFROV3BpTWpCM1MzZFpTMHQzV1VKQ1FVZEVkbnBCUWtOQlVXUkVRblJ2Q21SSVVuZGplbTkyVERKR2Fsa3lPVEZpYmxKNlRHMWtkbUl5WkhOYVV6VnFZakl3ZDFkM1dVdExkMWxDUWtGSFJIWjZRVUpIUVZKT1JFVjBSR0ZHVmpRS1ZGWlNUbVF3TVVWVFZFNU9ZV3hzTmxSV1VsWmxhelUyVTFSQ1VGSkhUVEZVVlZKV1ZUQm5lV0ZFUW10VFJVbzJWREpzVm1WV1NuQldXR3hUWWxWYWNRcFhWRWsxVFZkS2RWVnVjRTFpVjFJeVdXcEthMk14Y0ZST1YzQnBUV3BCZDJkWmMwZERhWE5IUVZGUlFqRnVhME5DUVVsRlpsRlNOMEZJYTBGa2QwUmtDbEJVUW5GNGMyTlNUVzFOV2tob2VWcGFlbU5EYjJ0d1pYVk9ORGh5Wml0SWFXNUxRVXg1Ym5WcVowRkJRV0ZFTUVnMllXTkJRVUZGUVhkQ1NVMUZXVU1LU1ZGRFkwZzFaM2Q2ZVhwalN5czJRMGxXUlZsNWFDOW5UMUIxVG5SSEsySm1Na3RSVjNjelltdzBkMUJNZDBsb1FVNXBUbGhKVFU4clFYTkNWWEozU2dwdVIybE1iRnB6Ym1GWlVGTlVMMFJyYVhOaU1WTTJNbmc0YkRoTVRVRnZSME5EY1VkVFRUUTVRa0ZOUkVFeVowRk5SMVZEVFVWcWJuZERaM0p5VDBaYUNuRnhaVkEzVWxoMFZ6Tk9iVVZoY0VwQ1NWQlBTSGRCY1VWdlNHcFpRMXAxUkhwMmVYbzVhMVkyVVdOVGRVRXlSbTU0VjJkMVowbDRRVWxNVVRZelpEZ0taa2RMSzNkNWRGSnNTR2REVVV0WGJ5OUdMMXBrVkRFdlluZEdZMW8xVTFKSlVXUjJTVzgwTlVSYU1qZFJSMjVXTkVVeGMydzFOMHQyZHowOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEYCIQCL0hLN8F/MP9vwgSdz+/iQENAQDELxbb9Iof9AM1xzQwIhALivkl8WgJT4/Ar5qw7YFVmwm0/NTCjbdKQGaLLYUq/b"
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903334795\noi96RirL9m9UyXG6HjPDpmSiky0zpAHHPprxO3V8ed4=\n\n\u2014 rekor.sigstore.dev wNI9ajBEAiALkPAgp+k06awOK/L61vo5LVdRCFA+1nlSt6lJRxRfTgIgcLxn0Us+FwzFlWlBffuuRN0c/l1VD8fWGcbyjdAOrrA=\n"
+                                },
+                                "hashes": [
+                                    "8WmzxoiPF78Y6Wy3Yz3/z3UivQ/G5a7yRYhYFNs5K9c=",
+                                    "IfVNe+al6qBrzLag1noKDTt1hfVP/QEsJUaR0FKwkR4=",
+                                    "iQ30i60Wx8Mna7t81ED3vrIMvsS/ThIkXj46vl49YCA=",
+                                    "RryBLmcgbhEJb0V6n1/hyzWbkV1nwC9jXmY3OSvmGLA=",
+                                    "M4sP5ntkoUboRM7z/xE/q40D2VQaC9HOUPOBH6zyTBE=",
+                                    "/GR3M9y4YHwNZEOuDQ3tzDhQTCeLPGsBF6LizEok0JA=",
+                                    "NLpInEigPRI2B8z6HyY41fukHBeu4HCrYo4pD1bJKLo=",
+                                    "vS35YDyq0smlQG7IzNxfNSeXyg2dSC6pLm6xfpaVj20=",
+                                    "XKfaQzmogzyTPcCptbOCc3NFxyFcPpf0FVOy8D3GJVg=",
+                                    "aaUa+tP0N7qd0YmRD6GeRSV95v/qzi6MQM73kzaP6mg=",
+                                    "VGtVfHICgauTXVpVVLFjdCkWMy0QU7JEz9JuPEFO3SI=",
+                                    "ehlqx0zsqPr6QkroaDWwmzaIZgk6XxruknZwNdsc0KM=",
+                                    "0zub+tP4hK5vunozsUeGgYO7RuxE2oVR7K23xPKD0Yg=",
+                                    "pJ4ZDPsptNfepakCzdep9FcVSOvgDrQcB/s15X8oGOs=",
+                                    "Ofb2lLpQCgDbuAT9cnT3VFX3f51EVxmLcYWUqfweNd4=",
+                                    "ZXL45Hv3wyggBdmE5C/zsqECV5g6XNqvvgOBR4PSAQg=",
+                                    "pYaLWQjbfWwfiUfqWddnJIt5PecHmyR38JKEZ6Ci2YE=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903334679",
+                                "rootHash": "oi96RirL9m9UyXG6HjPDpmSiky0zpAHHPprxO3V8ed4=",
+                                "treeSize": "2903334795"
+                            },
+                            "integratedTime": "1790802111",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025238941"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tgz"
+        },
+        "sha256": "cfac63bddf956deafb1172ca131ae5dcaafd6f95056086e233fca205593ed427"
+    },
+    {
+        "raw": {
+            "description": null,
+            "filesize": 23225704,
+            "md5": null,
+            "sha256": "f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d",
+            "sigstore": {
+                "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+                "messageSignature": {
+                    "messageDigest": {
+                        "algorithm": "SHA2_256",
+                        "digest": "9LG/s8ebW7EbjSKKElBBY7TA2rTWeYKNj18mtstqs10="
+                    },
+                    "signature": "MEQCICbBM5Te3zgBZppKvY3IOtu/3Y3aANWslGTRkwN0OhAcAiB/5K6qCwrUaBRXoL+385w3RdSHsagDTBtRFv4M3eeShw=="
+                },
+                "verificationMaterial": {
+                    "certificate": {
+                        "rawBytes": "MIIDJzCCAqygAwIBAgIUe68ZGYz9/VmKUx9TwYA8gtAuqjUwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwOTMwMjEwMjA2WhcNMjYwOTMwMjExMjA2WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVed432MsipEbQFLm+yKyNT8LlDrif+zBoglbqgbc0iZffJXf1QSPIrIVCL7Mw/BrLWv4TSPYNV+/soEmDyxiNKOCAcswggHHMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUNq47+r3vzMvSxpRXtzQ0PJ8VOfMwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHwYDVR0RAQH/BBUwE4ERdGhvbWFzQHB5dGhvbi5vcmcwKQYKKwYBBAGDvzABAQQbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMCsGCisGAQQBg78wAQgEHQwbaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tMFsGCisGAQQBg78wARgETQxLQ2hVeE1UTXdNREkzTWpZek1UVXpOekkwT0RjNU1EVVNIMmgwZEhCek9pVXlSaVV5Um1GalkyOTFiblJ6TG1kdmIyZHNaUzVqYjIwMIGJBgorBgEEAdZ5AgQCBHsEeQB3AHUA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg9B/k4wAABAMARjBEAiB0utGBNJUdIPioSj44TIv+BFitj1G60uSvn9sJ/uGyjgIgP6DU8jOdQHBwyKLlt0M0OSBs4CTpqJjmR8s9i6gdVLQwCgYIKoZIzj0EAwMDaQAwZgIxAMfz3AARZ9jVq3yOc7dEdpzxDliRBUvUEfRN5Bw3Xr9gg/cF15kx9B6uRTTI9MCg6wIxAIiFQsw0J1S+Rj2ROKNkxENmT8P1M5jq4U6xwGNlMZykMhRsaEn5C6utZxuneoOlYw=="
+                    },
+                    "timestampVerificationData": {
+                        "rfc3161Timestamps": [
+                            {
+                                "signedTimestamp": "MIIE6jADAgEAMIIE4QYJKoZIhvcNAQcCoIIE0jCCBM4CAQMxDTALBglghkgBZQMEAgEwgcIGCyqGSIb3DQEJEAEEoIGyBIGvMIGsAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQg5K8+4L1OItWmT7O9gJyng+Y4gj0b+/hPUwG6jzXd3pICFQCaAsckAIKdbVYrdXWrqVZ6dIooHBgPMjAyNjA5MzAyMTAyMDZaMAMCAQECCESLXWfa93b5oDKkMDAuMRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxFTATBgNVBAMTDHNpZ3N0b3JlLXRzYaCCAhQwggIQMIIBlqADAgECAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDAKBggqhkjOPQQDAzA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkMB4XDTI1MDQwODA2NTk0M1oXDTM1MDQwNjA2NTk0M1owLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2EwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATitrZnyEo2KDZP2QWMIBOgYbfSOTL5ZC/cHMv6Yq+HVIo1H9TC7Cx80KDiyvKhgB3wTqKyi9UDczhqg12b1AOLnRnydMTK+qB8M+1MjBci1+Jb8AV/VXu7CRuQCiPTHFyjajBoMA4GA1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUif15Q4fP0GVGwwJGxyxzW3206wMwHwYDVR0jBBgwFoAUmOwB73+7Uf/UlR5vioiYUweJzr8wFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCgYIKoZIzj0EAwMDaAAwZQIwO2mxX/opo7SrIX9QyxfZpJRcpAV2gZOm1AZzR+2rVyy6Uc8Ybp2ybIw13ckH4bcRAjEA5qO8FyOkmYpvg2/7ZNqiPxRzn5vqKHoVcIIqtpKq6l7TvOqzAxxclN7VwTG8e++XMYIB2zCCAdcCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQ6E1QvDJBh7rzBQy/Lio6LKiOLDDALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjA5MzAyMTAyMDZaMC8GCSqGSIb3DQEJBDEiBCCzAJzOyRxGgIi74w6PfX5eYkZCsK8M7SO0qwEIXijgUjCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQghfknvAerYsrDtENWwQ78gbLGiD/aernm2HDZ0TrNBbcwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUOhNULwyQYe68wUMvy4qOiyojiwwwCgYIKoZIzj0EAwIEZzBlAjEAlWf3jhZ5Q/xBH8gPwmR4GIMvq9KuExqhTO2NmfC9wpDrr0heYmOMPVRyK77QpDhCAjBz+K/HaLpnxIDvbGnbKmJvTp334+61Cyq6YP58ZpP/+XLgmlvknmWpfqrGxTXqkOA="
+                            }
+                        ]
+                    },
+                    "tlogEntries": [
+                        {
+                            "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJmNGIxYmZiM2M3OWI1YmIxMWI4ZDIyOGExMjUwNDE2M2I0YzBkYWI0ZDY3OTgyOGQ4ZjVmMjZiNmNiNmFiMzVkIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FUUNJQ2JCTTVUZTN6Z0JacHBLdlkzSU90dS8zWTNhQU5Xc2xHVFJrd04wT2hBY0FpQi81SzZxQ3dyVWFCUlhvTCszODV3M1JkU0hzYWdEVEJ0UkZ2NE0zZWVTaHc9PSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVUktla05EUVhGNVowRjNTVUpCWjBsVlpUWTRXa2RaZWprdlZtMUxWWGc1VkhkWlFUaG5kRUYxY1dwVmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDlVVFhkTmFrVjNUV3BCTWxkb1kwNU5hbGwzVDFSTmQwMXFSWGhOYWtFeVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZXWldRME16Sk5jMmx3UldKUlJreHRLM2xMZVU1VU9FeHNSSEpwWml0NlFtOW5iR0lLY1dkaVl6QnBXbVptU2xobU1WRlRVRWx5U1ZaRFREZE5keTlDY2t4WGRqUlVVMUJaVGxZckwzTnZSVzFFZVhocFRrdFBRMEZqYzNkblowaElUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZPY1RRM0NpdHlNM1o2VFhaVGVIQlNXSFI2VVRCUVNqaFdUMlpOZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoM1dVUldVakJTUVZGSUwwSkNWWGRGTkVWU1pFZG9kbUpYUm5wUlNFSTFaRWRvZG1KcE5YWmpiV04zUzFGWlMwdDNXVUpDUVVkRWRucEJRZ3BCVVZGaVlVaFNNR05JVFRaTWVUbG9XVEpPZG1SWE5UQmplVFZ1WWpJNWJtSkhWWFZaTWpsMFRVTnpSME5wYzBkQlVWRkNaemM0ZDBGUlowVklVWGRpQ21GSVVqQmpTRTAyVEhrNWFGa3lUblprVnpVd1kzazFibUl5T1c1aVIxVjFXVEk1ZEUxR2MwZERhWE5IUVZGUlFtYzNPSGRCVW1kRlZGRjRURkV5YUZZS1pVVXhWVlJZWkU1U1JXdDZWRmR3V21Wck1WVldXSEJQWld0cmQxUXdVbXBPVlRGRlZsWk9TVTF0WjNkYVJXaERaV3M1Y0ZaWWJGTmhWbFkxVlcweFJ3cGhiR3Q1VDFSR2FXSnNTalpVUnpGclpHMUplVnBJVG1GVmVsWnhXV3BKZDAxSlIwcENaMjl5UW1kRlJVRmtXalZCWjFGRFFraHpSV1ZSUWpOQlNGVkJDak5VTUhkaGMySklSVlJLYWtkU05HTnRWMk16UVhGS1MxaHlhbVZRU3pNdmFEUndlV2RET0hBM2J6UkJRVUZIWnpsQ0wyczBkMEZCUWtGTlFWSnFRa1VLUVdsQ01IVjBSMEpPU2xWa1NWQnBiMU5xTkRSVVNYWXJRa1pwZEdveFJ6WXdkVk4yYmpselNpOTFSM2xxWjBsblVEWkVWVGhxVDJSUlNFSjNlVXRNYkFwME1FMHdUMU5DY3pSRFZIQnhTbXB0VWpoek9XazJaMlJXVEZGM1EyZFpTVXR2V2tsNmFqQkZRWGROUkdGUlFYZGFaMGw0UVUxbWVqTkJRVkphT1dwV0NuRXplVTlqTjJSRlpIQjZlRVJzYVZKQ1ZYWlZSV1pTVGpWQ2R6TlljamxuWnk5alJqRTFhM2c1UWpaMVVsUlVTVGxOUTJjMmQwbDRRVWxwUmxGemR6QUtTakZUSzFKcU1sSlBTMDVyZUVWT2JWUTRVREZOTldweE5GVTJlSGRIVG14TldubHJUV2hTYzJGRmJqVkROblYwV25oMWJtVnZUMnhaZHowOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19",
+                            "inclusionPromise": {
+                                "signedEntryTimestamp": "MEQCIFF8LwfxT98/ohAvJWgJ7kpHirKJAaLEb01dYbTtuEQvAiAKlfoMTS/3S8QcdHfe+E/GhsWYXB4UCkfLjA6vMHfV4w=="
+                            },
+                            "inclusionProof": {
+                                "checkpoint": {
+                                    "envelope": "rekor.sigstore.dev - 1193050959916656506\n2903338120\nhy6G4WMfNITrg8BKvDZqatK7AmFE+scANrKRf3KRdfA=\n\n\u2014 rekor.sigstore.dev wNI9ajBEAiAdHwH1mE73yaCOhaI5PjtgAJ95mFsNRUZObA8d38MhewIgVk3wArQ4P/y380J7R7g9zgC0/jVV5TfpnFrr16rzsPg=\n"
+                                },
+                                "hashes": [
+                                    "oXBfSGXI0Sr0whX2javuaXbnxVleEPhU1/T48blfTmA=",
+                                    "UyOW6q+80hIrflFXrKxXY1jSeTYTfkpFRoPaSZ2EYhA=",
+                                    "bjVXnmkozFu7FI49xsmqYMsIz2EnChze8WmhPcCKsOc=",
+                                    "L3KiFI/OM/8TaRzw6XSMTeMxYZz27Etu4DOb8ZMAFOM=",
+                                    "2pE1zHtbuzd9J/n+j2xdbNPx55jJqajo7KL7P3P21GE=",
+                                    "rsv0KqhcY0lTQI2imIb36eOXzulk+YM80HMpqLPcjjs=",
+                                    "M0f2Bbg2s/NyN2amSVB7ev0jQhZ5DYYb9v522PyYxIQ=",
+                                    "Pn/p6/ki3B7mKkt1/ItnqjIoCW3liQKNgcxQ59ljYws=",
+                                    "XQHVQx9dIPmc2szOZmja7fcULUotkeuAfc2jBQ/seKk=",
+                                    "KB6FXumoExWEev8QlblfCrgh0+kOwcdutVaW4VJpbDM=",
+                                    "XHi1AHkNytdveMso4pw1ZaCgI1qfU+ZlAiDJbPhUBnc=",
+                                    "pJ4ZDPsptNfepakCzdep9FcVSOvgDrQcB/s15X8oGOs=",
+                                    "Ofb2lLpQCgDbuAT9cnT3VFX3f51EVxmLcYWUqfweNd4=",
+                                    "ZXL45Hv3wyggBdmE5C/zsqECV5g6XNqvvgOBR4PSAQg=",
+                                    "pYaLWQjbfWwfiUfqWddnJIt5PecHmyR38JKEZ6Ci2YE=",
+                                    "cIz1OY2tO8cVEgp0TmAffPApps2hJuAcAN+pESrpHHY=",
+                                    "4lYk7cX8PszZLoyQMWjMDB1BOBn4f7hehtFiHo92e5Y=",
+                                    "ttpxd0TJprOUtb/8Wf5DeIzwNtUw72Q0YnXE2LFMIZo=",
+                                    "qxzHanAzz57SDdmJe0B7bJK72NTIBbwEMGBBKvDOROw=",
+                                    "xH/DCseLHr9eKoYT8qsORZK7zVdEGYWHuVtsVrD95wY="
+                                ],
+                                "logIndex": "2903338100",
+                                "rootHash": "hy6G4WMfNITrg8BKvDZqatK7AmFE+scANrKRf3KRdfA=",
+                                "treeSize": "2903338120"
+                            },
+                            "integratedTime": "1790802126",
+                            "kindVersion": {
+                                "kind": "hashedrekord",
+                                "version": "0.0.1"
+                            },
+                            "logId": {
+                                "keyId": "wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0="
+                            },
+                            "logIndex": "3025242362"
+                        }
+                    ]
+                }
+            },
+            "slug": "python-31316",
+            "url": "https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tar.xz"
+        },
+        "sha256": "f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d"
+    }
+]
